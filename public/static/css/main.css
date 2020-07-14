@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h6,
+p {
+    margin-bottom: 0px;
+}
