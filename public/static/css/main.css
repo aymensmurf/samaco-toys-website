@@ -1,6 +1,6 @@
 html {
-    scroll-snap-type: y proximity;
-    /* scroll-snap-type: y mandatory; */
+    /* scroll-snap-type: y proximity; */
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     scroll-padding-top: 100xp;
 }
@@ -19,7 +19,9 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+button,
+a {
     font-family: "Montserrat", sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -49,13 +51,27 @@ p {
     font-size: 30px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    color: #2d4375;
+    font-size: 25px;
+}
+
+button:focus {
+    outline: 0;
+}
+
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     padding-right: 100px;
-    padding-left: 60px;
+    padding-left: 260px;
     scroll-snap-align: start;
 }
 

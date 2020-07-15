@@ -3,6 +3,8 @@ import React from 'react'
 const AboutUs = () => {
     return (
         <section>
+            <a id="about-us" />
+
             <h2 style={{ marginBottom: 55 }}>
                 <span style={{ color: '#EFB71C' }}>SAMACO Toys & Leisure</span> - A founding company of the toys Industry in the GCC.
             </h2>

@@ -4,6 +4,9 @@ const Header = () => {
     return (
         <>
             <div className='header'>
+                <div>
+                    <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" style={{ width: 161, height: 50, objectFit: 'contain', marginLeft: 260 }} />
+                </div>
                 <div style={{ marginRight: 100 }}>
                     <i className="fab fa-instagram"></i>
                     <i className="fab fa-facebook-f"></i>
@@ -15,7 +18,7 @@ const Header = () => {
                 .header {
                     position: fixed;
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: space-between;
                     padding-top: 75px;
                     padding-bottom: 75px;
                     width: 100%;

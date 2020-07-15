@@ -3,14 +3,18 @@ import React from 'react'
 const Home = () => {
     return (
         <section>
+            <a id="home" />
+
             <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
 
             <h1>To Enrich Children’s Lifes.</h1>
 
-            <div style={{display: 'flex'}}>
-                <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
-                <p style={{ fontSize: 33, marginLeft: 20 }}>EXPLOR</p>
-            </div>
+            <a href="#about-us">
+                <div style={{ display: 'flex' }}>
+                    <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
+                    <p style={{ fontSize: 33, marginLeft: 20 }}>EXPLOR</p>
+                </div>
+            </a>
 
             <style jsx>{`
                 section {
