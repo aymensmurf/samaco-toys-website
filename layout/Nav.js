@@ -111,11 +111,11 @@ const Nav = () => {
 
                 <div className="grid-2">
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <div style={{ height: 40, borderRight: '4px solid #EFB71C', marginTop: -10 }} />
+                        {/* <div style={{ height: 40, borderRight: '4px solid #EFB71C', marginTop: -10 }} /> */}
                         {links.map(({ link }, i) => <Number key={i} id={i} index={index} />)}
                     </div>
                     <div style={{ borderLeft: '1px solid white', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <div style={{ height: 40, borderLeft: '4px solid #EFB71C', marginTop: -10 }} />
+                        {/* <div style={{ height: 40, borderLeft: '4px solid #EFB71C', marginTop: -10 }} /> */}
                         {
                             links.map(({ title }, i) =>
                                 <NavBtn

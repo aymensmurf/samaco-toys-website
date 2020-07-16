@@ -1,4 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+let missions = [
+    'Morals',
+    'Vision',
+    'Leadership',
+    'Community Service',
+    'Integrity',
+    'Empowerment',
+    'Consultation',
+]
 
 const Philosophy = () => {
     return (
@@ -20,13 +30,9 @@ const Philosophy = () => {
                 <div>
                     <h3>Our mission</h3>
                     <div>
-                        <Item title='Morals' />
-                        <Item title='Vision' />
-                        <Item title='Leadership' />
-                        <Item title='Community Service' />
-                        <Item title='Integrity' />
-                        <Item title='Empowerment' />
-                        <Item title='Consultation' />
+                        {
+                            missions.map((elm, i) => <Item key={i} id={i} title={elm} length={missions.length} />)
+                        }
                     </div>
                 </div>
             </div>
@@ -43,11 +49,28 @@ const Philosophy = () => {
 
 export default Philosophy
 
-const Item = ({ title }) => {
+const Item = ({ id, title, length }) => {
+    const [index, setIndex] = useState(-1)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (index < length) {
+                setIndex(index + 1)
+            } else {
+                setIndex(0)
+            }
+        }, 1000)
+        return () => clearTimeout(timer);
+    });
+
+
+
     return (
-        <div style={{ maxWidth: 350, backgroundColor: '#EFB71C', marginBottom: 10, padding: '10px 30px', borderRadius: 9 }}>
-            <p style={{ color: '#2D4375' }}>{title}</p>
-        </div>
+        <div style={{
+            maxWidth: 350, backgroundColor: (id === index) ? '#EFB71C' : 'transparent', marginBottom: 10, padding: '10px 30px', borderRadius: 9
+        }}>
+            <p style={{ color: (id === index) ? '#2D4375' : '#fff' }}>{title}</p>
+        </div >
     )
 }
 
