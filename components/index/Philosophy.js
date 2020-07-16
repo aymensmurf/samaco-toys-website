@@ -2,9 +2,7 @@ import React from 'react'
 
 const Philosophy = () => {
     return (
-        <section>
-            <a id="philosophy" />
-
+        <section id="philosophy">
             <div style={{ display: 'grid', gridColumnGap: 100, gridTemplateColumns: '66% 34%' }}>
                 <div>
                     <div style={{ marginBottom: 50 }}>

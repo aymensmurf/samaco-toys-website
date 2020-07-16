@@ -53,18 +53,54 @@ const links = [
 
 const Nav = () => {
     const [index, setIndex] = useState(0)
+    const [positions, setPositions] = useState([])
 
     useEffect(() => {
-        if (process.browser) {
-            const link = '#' + window.location.href.split('#')[1];
+        handleScroll()
+        window.addEventListener('scroll', handleScroll)
+    }, [])
 
-            const indexOfLink = links.findIndex(elm => elm.link === link)
-            setIndex(indexOfLink)
+    const handleScroll = () => {
+        let positions = [];
+        let sbp = window.pageYOffset;
+
+        links.map(({ link }) => {
+            let anchor = document.getElementById(link.replace('#', ''));
+
+            if (anchor) {
+                positions.push(anchor.offsetTop)
+            }
+        })
+        setPositions(positions)
+
+        if ((sbp >= positions[0]) && (sbp < positions[1])) {
+            setIndex(0)
+        } else if ((sbp >= positions[1]) && (sbp < positions[2])) {
+            setIndex(1)
+        } else if ((sbp >= positions[2]) && (sbp < positions[3])) {
+            setIndex(2)
+        } else if ((sbp >= positions[3]) && (sbp < positions[4])) {
+            setIndex(3)
+        } else if ((sbp >= positions[4]) && (sbp < positions[5])) {
+            setIndex(4)
+        } else if ((sbp >= positions[5]) && (sbp < positions[6])) {
+            setIndex(5)
+        } else if ((sbp >= positions[6]) && (sbp < positions[7])) {
+            setIndex(6)
+        } else if ((sbp >= positions[7]) && (sbp < positions[8])) {
+            setIndex(7)
+        } else if ((sbp >= positions[8]) && (sbp < positions[9])) {
+            setIndex(8)
+        } else if ((sbp >= positions[9]) && (sbp < positions[10])) {
+            setIndex(9)
+        } else if ((sbp >= positions[10]) && (sbp < positions[11])) {
+            setIndex(10)
+        } else if ((sbp >= positions[11])) {
+            setIndex(11)
+        } else {
+            setIndex(-1)
         }
-    })
-
-
-
+    }
 
     return (
         <>
@@ -76,11 +112,23 @@ const Nav = () => {
                 <div className="grid-2">
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <div style={{ height: 40, borderRight: '4px solid #EFB71C', marginTop: -10 }} />
-                        {links.map(({ link }, i) => <Number key={i} id={i} index={index} link={link} />)}
+                        {links.map(({ link }, i) => <Number key={i} id={i} index={index} />)}
                     </div>
                     <div style={{ borderLeft: '1px solid white', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <div style={{ height: 40, borderLeft: '4px solid #EFB71C', marginTop: -10 }} />
-                        {links.map(({ title, link }, i) => <NavBtn key={i} id={i} index={index} title={title} link={link} handleClick={() => setIndex(i)} />)}
+                        {
+                            links.map(({ title }, i) =>
+                                <NavBtn
+                                    key={i}
+                                    id={i}
+                                    index={index}
+                                    title={title}
+                                    handleClick={() => {
+                                        window.scrollTo(0, positions[i])
+                                    }}
+                                />
+                            )
+                        }
                     </div>
                 </div>
             </nav>
@@ -118,26 +166,20 @@ const Nav = () => {
 export default Nav
 
 
-const NavBtn = ({ id, index, title, link, handleClick }) => {
-    const [isActive, setIsActive] = useState(false);
-
-    useEffect(() => {
-        setIsActive(window.location.href.includes(link))
-    })
-
+const NavBtn = ({ id, index, title, handleClick }) => {
     return (
         <div className="nav-btn" onClick={handleClick}>
-            <a href={link}>{title}</a>
+            <p>{title}</p>
 
             <style jsx>{`
                 .nav-btn {
                     padding: 15px 6px;
                     border-left: ${(id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
+                    cursor: pointer;
                 }
 
-                a {
-                    color: ${isActive ? 'white' : '#847F7F'};
-                    text-decoration: none;
+                p {
+                    color: ${(index == id) ? '#fff' : '#847F7F'};
                     font-size: 20px;
                 }
             `}</style>
@@ -145,13 +187,7 @@ const NavBtn = ({ id, index, title, link, handleClick }) => {
     )
 }
 
-const Number = ({ id, index, link }) => {
-    const [isActive, setIsActive] = useState(false);
-
-    useEffect(() => {
-        setIsActive(window.location.href.includes(link))
-    })
-
+const Number = ({ id, index }) => {
     return (
         <div className="number">
             <p>{(id + 1 < 10) ? `0${id + 1}` : id + 1}</p>
@@ -165,8 +201,7 @@ const Number = ({ id, index, link }) => {
                 }
 
                 p {
-                    color: ${isActive ? 'white' : '#847F7F'};
-                    text-decoration: none;
+                    color: ${(index == id) ? '#fff' : '#847F7F'};
                     font-size: 20px;
                     transform: rotate(270deg);
                 }

@@ -2,9 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <section>
-            <a id="home" />
-
+        <section id="home">
             <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
 
             <h1>To Enrich Children’s Lifes.</h1>

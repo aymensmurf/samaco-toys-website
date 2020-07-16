@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
             <Header />
 
             <Nav />
-            
+
             {children}
 
             <Footer />

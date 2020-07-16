@@ -2,9 +2,7 @@ import React from 'react'
 
 const Founder = () => {
     return (
-        <section>
-            <a id="founder" />
-
+        <section id="founder">
             <div style={{ width: '60%' }}>
                 <h2 style={{ marginBottom: 40 }}>
                     <span style={{ color: '#EFB71C' }}>MR. IBRAHIM HASSAN SHARBATLY</span> FOUNDER, SAMACO & FIRST GROUP.

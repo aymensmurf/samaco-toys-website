@@ -2,9 +2,7 @@ import React from 'react'
 
 const Customers = () => {
     return (
-        <section>
-            <a id="customers" />
-
+        <section id="customers">
             <h2 style={{ marginBottom: 150, marginTop: 200, }}>These are the <span style={{ color: '#EFB71C' }}>lovely customers</span> that we work with:</h2>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>

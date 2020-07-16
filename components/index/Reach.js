@@ -2,9 +2,7 @@ import React from 'react'
 
 const Reach = () => {
     return (
-        <section>
-            <a id="reach" />
-
+        <section id="reach">
             <h2 style={{ marginBottom: 60, marginTop: 200, }}>
                 We reach <span style={{ color: '#EFB71C' }}>every city</span> in Saudi Arabia, UAE, Oman, Kuwait and Bahrain.
             </h2>

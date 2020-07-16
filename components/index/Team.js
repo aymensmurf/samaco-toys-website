@@ -2,9 +2,7 @@ import React from 'react'
 
 const Team = () => {
     return (
-        <section>
-            <a id="team" />
-
+        <section id="team">
             <h2 style={{ marginTop: 200, marginBottom: 120 }}>
                 We are a<span style={{ color: '#EFB71C' }}> multi-cultural company.</span>
             </h2>

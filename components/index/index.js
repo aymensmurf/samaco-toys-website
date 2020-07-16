@@ -8,6 +8,8 @@ import Facility from './Facility'
 import Reach from './Reach'
 import Brands from './Brands'
 import Customers from './Customers'
+import Media from './Media'
+import Contact from './Contact'
 
 export {
     Home,
@@ -20,4 +22,6 @@ export {
     Reach,
     Brands,
     Customers,
+    Media,
+    Contact,
 }

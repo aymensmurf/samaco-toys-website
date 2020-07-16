@@ -2,9 +2,7 @@ import React from 'react'
 
 const Facility = () => {
     return (
-        <section>
-            <a id="facility" />
-
+        <section id="facility">
             <div style={{ width: '60%' }}>
                 <h2 style={{ marginBottom: 60 }}>
                     <span style={{ color: '#EFB71C' }}>Fully equipped</span> head office in Jeddah, Saudi Arabia.
