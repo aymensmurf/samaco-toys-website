@@ -1,7 +1,7 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import { withTranslation } from '../../i18n'
 
-const AboutUs = ({ t }) => {
+const AboutUs = ({ t, isRTL }) => {
     return (
         <section id="about-us">
             <h2 style={{ marginBottom: 55 }}>
@@ -9,7 +9,7 @@ const AboutUs = ({ t }) => {
             </h2>
 
             <div style={{ display: 'flex', marginBottom: 60 }}>
-                <p style={{ marginRight: 40 }}>{t('we_have')} <span style={{ color: '#EFB71C' }}>{t('over_four_decades')}</span> {t('long_experience')}</p>
+                <p style={{ marginRight: isRTL ? 0 : 40, marginLeft: isRTL ? 40 : 0 }}>{t('we_have')} <span style={{ color: '#EFB71C' }}>{t('over_four_decades')}</span> {t('long_experience')}</p>
 
                 <p><span style={{ color: '#EFB71C' }}>{t('first_group_international')}</span> {t('initialted_vision_expand')}</p>
             </div>

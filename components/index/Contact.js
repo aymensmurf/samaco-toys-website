@@ -1,7 +1,7 @@
 import React from 'react'
 import { i18n, withTranslation } from '../../i18n'
 
-const Contact = ({ t }) => {
+const Contact = ({ t, isRTL }) => {
     return (
         <section id="contact">
             <div className="contact-grid" style={{ marginTop: 225, marginBottom: 100 }}>
@@ -48,7 +48,7 @@ const Contact = ({ t }) => {
 
                     <div style={{ display: 'flex', marginTop: 75 }}>
                         <img src="/img/alnahla-logo.png" alt="AlNahla Group" />
-                        <p style={{ fontSize: 30, marginLeft: 45 }}>{t('part_of')} <br />{t('al_nahla_group')}</p>
+                        <p style={{ fontSize: 30, marginLeft: isRTL ? 0 : 45, marginRight: isRTL ? 45 : 0 }}>{t('part_of')} <br />{t('al_nahla_group')}</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,8 @@ const Contact = ({ t }) => {
                 i {
                     color: #847F7F;
                     font-size: 25px;
-                    margin-right: 20px;
+                    margin-right: ${isRTL ? '0px' : '20px'};
+                    margin-left: ${isRTL ? '20px' : '0px'};
                 }
 
                 hr {

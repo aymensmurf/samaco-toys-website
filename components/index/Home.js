@@ -1,7 +1,7 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import { withTranslation } from '../../i18n'
 
-const Home = ({ t }) => {
+const Home = ({ t, isRTL }) => {
     return (
         <section id="home">
             <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
@@ -11,7 +11,11 @@ const Home = ({ t }) => {
             <a href="#about-us">
                 <div style={{ display: 'flex' }}>
                     <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
-                    <p style={{ fontSize: 33, marginLeft: 20 }}>{t('explore')}</p>
+                    <p style={{
+                        fontSize: 33,
+                        marginLeft: isRTL ? 0 : 20,
+                        marginRight: isRTL ? 20 : 0
+                    }}>{t('explore')}</p>
                 </div>
             </a>
 

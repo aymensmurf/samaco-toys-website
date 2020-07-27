@@ -123,12 +123,34 @@ const Nav = ({ t }) => {
 
 
                 <div className="grid-2">
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        {/* <div style={{ height: 40, borderRight: '4px solid #EFB71C', marginTop: -10 }} /> */}
-                        {links.map(({ link }, i) => <Number key={i} id={i} index={index} />)}
+                    <div
+                        className={`numbers ${isRTL ? 'rtl' : 'ltr'}`}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center'
+                        }}>
+                        {links.map(
+                            ({ title }, i) =>
+                                <Number
+                                    key={i}
+                                    id={i}
+                                    index={index}
+                                    isRTL={isRTL}
+                                />
+                        )}
                     </div>
-                    <div style={{ borderLeft: '1px solid white', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        {/* <div style={{ height: 40, borderLeft: '4px solid #EFB71C', marginTop: -10 }} /> */}
+
+
+                    <div
+                        className={`menu ${isRTL ? 'rtl' : 'ltr'}`}
+                        style={{
+                            borderLeft: isRTL ? 'none' : '1px solid white',
+                            borderRight: isRTL ? '1px solid white' : 'none',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center'
+                        }}>
                         {
                             links.map(({ title }, i) =>
                                 <NavBtn
@@ -139,6 +161,7 @@ const Nav = ({ t }) => {
                                     handleClick={() => {
                                         window.scrollTo(0, positions[i])
                                     }}
+                                    isRTL={isRTL}
                                 />
                             )
                         }
@@ -151,11 +174,15 @@ const Nav = ({ t }) => {
                     position: fixed;
                     height: 100vh;
                     width: 200px;
+                    top: 0px;
+                    right: ${isRTL ? '0px' : 'auto'};
+                    left: ${isRTL ? 'auto' : '0px'};
                 }
 
                 .lang {
                     position: absolute;
-                    left: 28%;
+                    left: ${isRTL ? 'auto' : '28%'};
+                    right: ${isRTL ? '28%' : 'auto'};
                     top: 65px;
                     height: 66px;
                     width: 66px;
@@ -170,6 +197,13 @@ const Nav = ({ t }) => {
                     display: grid;
                     grid-template-columns: auto auto;
                     height: 100%;
+                }
+
+                .grid-2 .numbers {
+                    order: ${isRTL ? 1 : 0};
+                }
+                .grid-2 .menu {
+                    order: ${isRTL ? 0 : 1};
                 }
 
                 button {
@@ -187,7 +221,7 @@ Nav.getInitialProps = async () => ({
 export default withTranslation('nav')(Nav)
 
 
-const NavBtn = ({ id, index, title, handleClick }) => {
+const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
     return (
         <div className="nav-btn" onClick={handleClick}>
             <p>{title}</p>
@@ -195,7 +229,8 @@ const NavBtn = ({ id, index, title, handleClick }) => {
             <style jsx>{`
                 .nav-btn {
                     padding: 15px 6px;
-                    border-left: ${(id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
+                    border-left: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
+                    border-right: ${isRTL ? (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent' : 'none'};
                     cursor: pointer;
                 }
 
@@ -208,7 +243,7 @@ const NavBtn = ({ id, index, title, handleClick }) => {
     )
 }
 
-const Number = ({ id, index }) => {
+const Number = ({ id, index, isRTL }) => {
     return (
         <div className="number">
             <p>{(id + 1 < 10) ? `0${id + 1}` : id + 1}</p>
@@ -216,8 +251,10 @@ const Number = ({ id, index }) => {
             <style jsx>{`
                 .number {
                     padding: 15px 10px;
-                    padding-left: 50px;
-                    border-right: ${(id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
+                    padding-left: ${isRTL ? '10px' : '50px'};
+                    padding-right: ${isRTL ? '50px' : '10px'};
+                    border-right: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
+                    border-left: ${isRTL ? (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent' : 'none'};
                     text-align: center;
                 }
 

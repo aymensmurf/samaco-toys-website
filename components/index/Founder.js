@@ -1,7 +1,7 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import { withTranslation } from '../../i18n'
 
-const Founder = ({ t }) => {
+const Founder = ({ t, isRTL }) => {
     return (
         <section id="founder">
             <div style={{ width: '60%' }}>
@@ -10,14 +10,14 @@ const Founder = ({ t }) => {
                 </h2>
 
                 <div style={{ display: 'flex' }}>
-                    <p style={{ marginRight: 40 }}>{t('founder_samaco')}</p>
+                    <p>{t('founder_samaco')}</p>
                 </div>
             </div>
 
             <style jsx>{`
                 section {
-                    background-image: url(/img/sections/founder.png);
-                    background-position: bottom right;
+                    background-image: ${isRTL ? 'url(/img/sections/founder-rtl.png)' : 'url(/img/sections/founder.png)'};
+                    background-position: ${isRTL ? 'bottom left' : 'bottom right'};
                     background-repeat: no-repeat;
                     background-size: cover;
                     // background-attachment: fixed;

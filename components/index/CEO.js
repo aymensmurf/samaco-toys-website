@@ -1,7 +1,7 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import { withTranslation } from '../../i18n'
 
-const CEO = ({ t }) => {
+const CEO = ({ t, isRTL }) => {
     return (
         <section id="ceo">
             <div style={{ width: '60%' }}>
@@ -14,8 +14,8 @@ const CEO = ({ t }) => {
 
             <style jsx>{`
                 section {
-                    background-image: url(/img/sections/ceo.png);
-                    background-position: bottom right;
+                    background-image: ${isRTL ? 'url(/img/sections/ceo-rtl.png)' : 'url(/img/sections/ceo.png)'};
+                    background-position: ${isRTL ? 'bottom left' : 'bottom right'};
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-attachment: fixed;

@@ -67,16 +67,6 @@ button:focus {
     outline: 0;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    padding-right: 100px;
-    padding-left: 260px;
-    scroll-snap-align: start;
-}
-
 .overlay {
     background-color: #2d4375;
     opacity: 0.6;
