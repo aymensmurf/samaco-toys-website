@@ -1,9 +1,10 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Brands = () => {
+const Brands = ({ t }) => {
     return (
-        <section id="brands">            
-            <h2 style={{ marginBottom: 150, marginTop: 200, }}>These are the <span style={{ color: '#EFB71C' }}>lovely brands</span> that we work with:</h2>
+        <section id="brands">
+            <h2 style={{ marginBottom: 150, marginTop: 200, }}>{t('these_are_the')} <span style={{ color: '#EFB71C' }}>{t('lovely_brands')}</span> {t('that_we_work_with')}:</h2>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                 <div className='brands-grid'>
@@ -19,7 +20,7 @@ const Brands = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                 <button id='btn-brand-load-more'>
-                    Load more (+72 more brands)
+                    {t('load_more')} (+72 {t('more_brands')})
                 </button>
             </div>
 
@@ -44,4 +45,8 @@ const Brands = () => {
     )
 }
 
-export default Brands
+Brands.getInitialProps = async () => ({
+    namespacesRequired: ['brands'],
+})
+
+export default withTranslation('brands')(Brands)

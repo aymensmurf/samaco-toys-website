@@ -1,34 +1,36 @@
 import React, { useState, useEffect } from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-let missions = [
-    'Morals',
-    'Vision',
-    'Leadership',
-    'Community Service',
-    'Integrity',
-    'Empowerment',
-    'Consultation',
-]
+const Philosophy = ({ t }) => {
 
-const Philosophy = () => {
+    let missions = [
+        t('morals'),
+        t('vision'),
+        t('leadership'),
+        t('community_service'),
+        t('integrity'),
+        t('empowerment'),
+        t('consultation'),
+    ]
+
     return (
         <section id="philosophy">
             <div style={{ display: 'grid', gridColumnGap: 100, gridTemplateColumns: '66% 34%' }}>
                 <div>
                     <div style={{ marginBottom: 50 }}>
-                        <h3>Our vision</h3>
-                        <p>To be the premier kids toy distributor today and tomorrow by providing the best range of fun and educational toys in the world in addition to pursue sustained growth in a competitive market.</p>
+                        <h3>{t('our_vision')}</h3>
+                        <p>{t('the_premier_kids___')}</p>
                     </div>
 
                     <div>
-                        <h3>Our mission</h3>
-                        <p>To deliver high quality, safe and innovative toys to the consumer. We are diligent in our research and preparation so that we can do it right at the first time itself, resulting in products that meet our objectives and maintain our long-standing reputation as a quality toy distributor.</p>
-                        <p>We believe toys can enrich children’s lives. It is therefore a top priority for us to offer a product which contributes positively to children’s well-being and development.</p>
+                        <h3>{t('our_mission')}</h3>
+                        <p>{t('deliver_high_quality___')}</p>
+                        <p>{t('we_belive_toys___')}</p>
                     </div>
                 </div>
 
                 <div>
-                    <h3>Our mission</h3>
+                    <h3>{t('our_value')}</h3>
                     <div>
                         {
                             missions.map((elm, i) => <Item key={i} id={i} title={elm} length={missions.length} />)
@@ -47,7 +49,11 @@ const Philosophy = () => {
     )
 }
 
-export default Philosophy
+Philosophy.getInitialProps = async () => ({
+    namespacesRequired: ['philosophy'],
+})
+
+export default withTranslation('philosophy')(Philosophy)
 
 const Item = ({ id, title, length }) => {
     const [index, setIndex] = useState(-1)

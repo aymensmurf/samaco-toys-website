@@ -1,16 +1,17 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Home = () => {
+const Home = ({ t }) => {
     return (
         <section id="home">
             <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
 
-            <h1>To Enrich Children’s Lifes.</h1>
+            <h1>{t('to_enrich_children_lives')}</h1>
 
             <a href="#about-us">
                 <div style={{ display: 'flex' }}>
                     <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
-                    <p style={{ fontSize: 33, marginLeft: 20 }}>EXPLOR</p>
+                    <p style={{ fontSize: 33, marginLeft: 20 }}>{t('explore')}</p>
                 </div>
             </a>
 
@@ -39,4 +40,8 @@ const Home = () => {
     )
 }
 
-export default Home
+Home.getInitialProps = async () => ({
+    namespacesRequired: ['home'],
+})
+
+export default withTranslation('home')(Home)

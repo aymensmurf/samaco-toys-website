@@ -1,10 +1,11 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Team = () => {
+const Team = ({ t }) => {
     return (
         <section id="team">
             <h2 style={{ marginTop: 200, marginBottom: 120 }}>
-                We are a<span style={{ color: '#EFB71C' }}> multi-cultural company.</span>
+                {t('we_are')}<span style={{ color: '#EFB71C' }}> {t('multi_cultural_company')}</span>
             </h2>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
@@ -69,6 +70,12 @@ const Team = () => {
     )
 }
 
+Team.getInitialProps = async () => ({
+    namespacesRequired: ['team'],
+})
+
+export default withTranslation('team')(Team)
+
 const Item = ({ name, position, pic }) => {
     return (
         <div className="avatar-bg">
@@ -95,4 +102,3 @@ const Item = ({ name, position, pic }) => {
     )
 }
 
-export default Team

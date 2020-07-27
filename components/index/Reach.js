@@ -1,10 +1,11 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Reach = () => {
+const Reach = ({ t }) => {
     return (
         <section id="reach">
             <h2 style={{ marginBottom: 60, marginTop: 200, }}>
-                We reach <span style={{ color: '#EFB71C' }}>every city</span> in Saudi Arabia, UAE, Oman, Kuwait and Bahrain.
+                {t('we_reach')} <span style={{ color: '#EFB71C' }}>{t('every_city')}</span> {t('in_saudi_arabia___')}
             </h2>
 
             <style jsx>{`
@@ -21,4 +22,8 @@ const Reach = () => {
     )
 }
 
-export default Reach
+Reach.getInitialProps = async () => ({
+    namespacesRequired: ['reach'],
+})
+
+export default withTranslation('reach')(Reach)

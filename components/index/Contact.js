@@ -1,24 +1,25 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Contact = () => {
+const Contact = ({ t }) => {
     return (
         <section id="contact">
-            <div className="contact-grid" style={{marginTop: 225, marginBottom: 100}}>
+            <div className="contact-grid" style={{ marginTop: 225, marginBottom: 100 }}>
                 <div>
                     <form>
                         <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#CCCCCC', borderRadius: 20, padding: 20 }}>
-                            <input type="email" name="email" placeholder="Email*" style={{ marginBottom: 20 }} />
-                            <textarea name="message" rows="6" placeholder="Message*" style={{ marginBottom: 20 }}></textarea>
-                            <input type="button" value="Send message" />
+                            <input type="email" name="email" placeholder={`${t('email')}*`} style={{ marginBottom: 20 }} />
+                            <textarea name="message" rows="6" placeholder={`${t('message')}*`} style={{ marginBottom: 20 }}></textarea>
+                            <input type="button" value={t('send_message')} />
                         </div>
                     </form>
                 </div>
                 <div>
-                    <h4>Saudi Arabia</h4>
+                    <h4>{t('saudi_arabia')}</h4>
 
                     <div style={{ display: 'flex', marginBottom: 11 }}>
                         <i className="fas fa-map-marker-alt"></i>
-                        <p>Al Safa District3, Price Majed Road, PO<br/> Box 21463, Jeddah, Saudi Arabia</p>
+                        <p>{t('al_safa_district3___')}<br /> {t('po_box_21463')}</p>
                     </div>
                     <div style={{ display: 'flex', marginBottom: 11 }}>
                         <i className="fas fa-phone"></i>
@@ -30,11 +31,11 @@ const Contact = () => {
                     </div>
 
                     <hr />
-                    <h4>Dubai, UAE</h4>
+                    <h4>{t('dubai_uae')}</h4>
 
                     <div style={{ display: 'flex', marginBottom: 11 }}>
                         <i className="fas fa-map-marker-alt"></i>
-                        <p>33rd Floor, I-Rise Tower, Hessa Street, <br/>Tecom, PO  Box 29244, Dubai, UAE</p>
+                        <p>{t('33rd_floor___')} <br />{t('po_box_29244')}</p>
                     </div>
                     <div style={{ display: 'flex', marginBottom: 11 }}>
                         <i className="fas fa-phone"></i>
@@ -47,7 +48,7 @@ const Contact = () => {
 
                     <div style={{ display: 'flex', marginTop: 75 }}>
                         <img src="/img/alnahla-logo.png" alt="AlNahla Group" />
-                        <p style={{fontSize: 30, marginLeft: 45}}>part of <br/>al nahla group</p>
+                        <p style={{ fontSize: 30, marginLeft: 45 }}>{t('part_of')} <br />{t('al_nahla_group')}</p>
                     </div>
                 </div>
             </div>
@@ -106,4 +107,8 @@ const Contact = () => {
     )
 }
 
-export default Contact
+Contact.getInitialProps = async () => ({
+    namespacesRequired: ['contact'],
+})
+
+export default withTranslation('contact')(Contact)

@@ -1,9 +1,10 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Customers = () => {
+const Customers = ({ t }) => {
     return (
         <section id="customers">
-            <h2 style={{ marginBottom: 150, marginTop: 200, }}>These are the <span style={{ color: '#EFB71C' }}>lovely customers</span> that we work with:</h2>
+            <h2 style={{ marginBottom: 150, marginTop: 200, }}>{t('these_are_the')} <span style={{ color: '#EFB71C' }}>{t('lovely_customers')}</span> {t('that_we_work_with')}:</h2>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                 <div className='customers-grid'>
@@ -18,7 +19,7 @@ const Customers = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                 <button id='btn-brand-load-more'>
-                    Load more (+137 more customers)
+                    {t('load_more')} (+137 {t('more_customers')})
                 </button>
             </div>
 
@@ -43,4 +44,8 @@ const Customers = () => {
     )
 }
 
-export default Customers
+Customers.getInitialProps = async () => ({
+    namespacesRequired: ['customers'],
+})
+
+export default withTranslation('customers')(Customers)

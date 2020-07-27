@@ -81,3 +81,13 @@ section {
     background-color: #2d4375;
     opacity: 0.6;
 }
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+}

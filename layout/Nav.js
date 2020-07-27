@@ -1,61 +1,66 @@
 import React, { useState, useEffect } from 'react'
+import { i18n, withTranslation } from '../i18n'
 
-const links = [
-    {
-        title: "Home",
-        link: "#home",
-    },
-    {
-        title: "About us",
-        link: "#about-us",
-    },
-    {
-        title: "Founder",
-        link: "#founder",
-    },
-    {
-        title: "Philosophy",
-        link: "#philosophy",
-    },
-    {
-        title: "CEO",
-        link: "#ceo",
-    },
-    {
-        title: "Team",
-        link: "#team",
-    },
-    {
-        title: "Facility",
-        link: "#facility",
-    },
-    {
-        title: "Reach",
-        link: "#reach",
-    },
-    {
-        title: "Brands",
-        link: "#brands",
-    },
-    {
-        title: "Customers",
-        link: "#customers",
-    },
-    {
-        title: "Media",
-        link: "#media",
-    },
-    {
-        title: "Contact",
-        link: "#contact",
-    },
-]
-
-const Nav = () => {
+const Nav = ({ t }) => {
     const [index, setIndex] = useState(0)
     const [positions, setPositions] = useState([])
+    const [isRTL, setIsRTL] = useState(false)
+
+    const links = [
+        {
+            title: t('home'),
+            link: "#home",
+        },
+        {
+            title: t('about_us'),
+            link: "#about-us",
+        },
+        {
+            title: t('founder'),
+            link: "#founder",
+        },
+        {
+            title: t('philosophy'),
+            link: "#philosophy",
+        },
+        {
+            title: t('ceo'),
+            link: "#ceo",
+        },
+        {
+            title: t('team'),
+            link: "#team",
+        },
+        {
+            title: t('facility'),
+            link: "#facility",
+        },
+        {
+            title: t('reach'),
+            link: "#reach",
+        },
+        {
+            title: t('brands'),
+            link: "#brands",
+        },
+        {
+            title: t('customers'),
+            link: "#customers",
+        },
+        {
+            title: t('media'),
+            link: "#media",
+        },
+        {
+            title: t('contact'),
+            link: "#contact",
+        },
+    ]
 
     useEffect(() => {
+        let isRTL = i18n.language === 'ar' ? true : false;
+        setIsRTL(isRTL)
+
         handleScroll()
         window.addEventListener('scroll', handleScroll)
     }, [])
@@ -105,9 +110,17 @@ const Nav = () => {
     return (
         <>
             <nav>
-                <button className='lang'>
-                    AR
-                </button>
+                {
+                    isRTL ?
+                        <button className='lang' onClick={() => { i18n.changeLanguage('en'); setIsRTL(false) }}>
+                            EN
+                        </button>
+                        :
+                        <button className='lang' onClick={() => { i18n.changeLanguage('ar'); setIsRTL(true) }}>
+                            AR
+                        </button>
+                }
+
 
                 <div className="grid-2">
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -158,12 +171,20 @@ const Nav = () => {
                     grid-template-columns: auto auto;
                     height: 100%;
                 }
+
+                button {
+                    cursor: pointer;
+                }
             `}</style>
         </>
     )
 }
 
-export default Nav
+Nav.getInitialProps = async () => ({
+    namespacesRequired: ['nav'],
+})
+
+export default withTranslation('nav')(Nav)
 
 
 const NavBtn = ({ id, index, title, handleClick }) => {

@@ -1,24 +1,25 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const AboutUs = () => {
+const AboutUs = ({ t }) => {
     return (
         <section id="about-us">
             <h2 style={{ marginBottom: 55 }}>
-                <span style={{ color: '#EFB71C' }}>SAMACO Toys & Leisure</span> - A founding company of the toys Industry in the GCC.
+                <span style={{ color: '#EFB71C' }}>{t('samaco_toys_leisure')}</span> - {t('founding_company_toys_industry')}
             </h2>
 
             <div style={{ display: 'flex', marginBottom: 60 }}>
-                <p style={{ marginRight: 40 }}>We have <span style={{ color: '#EFB71C' }}>over four-decades</span> of long experience in GCC market. Our commitment to bring nothing but the best into our territory has made our partner brands the category leaders in GCC market.</p>
+                <p style={{ marginRight: 40 }}>{t('we_have')} <span style={{ color: '#EFB71C' }}>{t('over_four_decades')}</span> {t('long_experience')}</p>
 
-                <p><span style={{ color: '#EFB71C' }}>First Group International</span> was initiated on our vision to expand beyond borders to consistently gain market share while focusing on brand exposure throughout the Middle East, Africa and Europe.</p>
+                <p><span style={{ color: '#EFB71C' }}>{t('first_group_international')}</span> {t('initialted_vision_expand')}</p>
             </div>
 
-            <h4 style={{ marginBottom: 20 }}>Established</h4>
+            <h4 style={{ marginBottom: 20 }}>{t('established')}</h4>
 
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Item title='year' value='1975' />
-                <Item title='by' value='Al Nahla Group' />
-                <Item title='in' value='Jeddah, Saudi Arabia' />
+                <Item title={t('year')} value='1975' />
+                <Item title={t('by')} value={t('al_nahla_group')} />
+                <Item title={t('in')} value={t('jeddah_saudi_arabia')} />
             </div>
 
             <style jsx>{`
@@ -38,7 +39,11 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs
+AboutUs.getInitialProps = async () => ({
+    namespacesRequired: ['about-us'],
+})
+
+export default withTranslation('about-us')(AboutUs)
 
 
 export const Item = ({ title, value }) => {

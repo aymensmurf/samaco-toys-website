@@ -1,11 +1,12 @@
 import React from 'react'
+import { i18n, withTranslation } from '../../i18n'
 
-const Media = () => {
+const Media = ({ t }) => {
     return (
         <section id="media">
-            <h2>Pic</h2>
+            <h2>{t('pictures')}</h2>
 
-            <h2 style={{marginTop: 80}}>Video</h2>
+            <h2 style={{ marginTop: 80 }}>{t('videos')}</h2>
 
             <style jsx>{`
                 h2 {
@@ -16,4 +17,8 @@ const Media = () => {
     )
 }
 
-export default Media
+Media.getInitialProps = async () => ({
+    namespacesRequired: ['media'],
+})
+
+export default withTranslation('media')(Media)
