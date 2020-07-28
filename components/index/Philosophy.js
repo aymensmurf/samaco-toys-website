@@ -15,7 +15,7 @@ const Philosophy = ({ t }) => {
 
     return (
         <section id="philosophy">
-            <div style={{ display: 'grid', gridColumnGap: 100, gridTemplateColumns: '66% 34%' }}>
+            <div className="grid-2">
                 <div>
                     <div style={{ marginBottom: 50 }}>
                         <h3>{t('our_vision')}</h3>

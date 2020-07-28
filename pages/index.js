@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <Layout>
 
-      <div className={isRTL ? 'rtl' : 'ltr'}>
+      <div className={isRTL ? 'rtl' : 'ltr'} style={{width: '100%'}}>
         <Home isRTL={isRTL} />
         <AboutUs isRTL={isRTL} />
         <Founder isRTL={isRTL} />
@@ -29,18 +29,13 @@ const Index = () => {
         <Brands />
         <Customers />
         <Media />
-        <Contact isRTL={isRTL}/>
+        <Contact isRTL={isRTL} />
       </div>
 
       <style>{`
         section {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          min-height: 100vh;
           padding-right: ${isRTL ? '260px' : '100px'};
           padding-left: ${isRTL ? '100px' : '260px'};
-          scroll-snap-align: start;
         }
       `}</style>
 

@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 
 import Header from './Header'
 import Nav from './Nav'
 import Footer from './Footer'
 
+import { i18n } from '../i18n'
+
 const Layout = ({ children }) => {
+    const [isRTL, setIsRTL] = useState(false)
+
+    useEffect(() => {
+        let isRTL = i18n.language === 'ar' ? true : false;
+        setIsRTL(isRTL)
+    })
+
+    function handleChangeLang(lang) {
+        i18n.changeLanguage(lang);
+
+        if (lang === 'ar') {
+            setIsRTL(true)
+        } else {
+            setIsRTL(false)
+        }
+    }
+
+
     return (
         <>
             <Head>
@@ -21,9 +41,9 @@ const Layout = ({ children }) => {
                 <title>SAMACO TOYS & LEISURE</title>
             </Head>
 
-            <Header />
+            <Header isRTL={isRTL} handleChangeLang={handleChangeLang} />
 
-            <Nav />
+            <Nav isRTL={isRTL} />
 
             {children}
 

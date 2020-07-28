@@ -4,7 +4,7 @@ import { i18n, withTranslation } from '../../i18n'
 const Facility = ({ t }) => {
     return (
         <section id="facility">
-            <div style={{ width: '60%' }}>
+            <div>
                 <h2 style={{ marginBottom: 60 }}>
                     <span style={{ color: '#EFB71C' }}>{t('fully_equipped')}</span> {t('head_office_jeddah___')}
                 </h2>
@@ -21,6 +21,16 @@ const Facility = ({ t }) => {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-attachment: fixed;
+                }
+
+                div:first-child{
+                    width: 60%;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    div:first-child{
+                        width: 100%;
+                    }
                 }
             `}</style>
         </section>

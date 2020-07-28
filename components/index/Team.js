@@ -1,5 +1,5 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import { withTranslation } from '../../i18n'
 
 const Team = ({ t }) => {
     return (
@@ -9,7 +9,7 @@ const Team = ({ t }) => {
             </h2>
 
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
-                <div className='team-grid'>
+                <div className='grid-3'>
                     <Item
                         name='Yasser Tamar'
                         position='General Manager'
@@ -57,15 +57,6 @@ const Team = ({ t }) => {
                     />
                 </div>
             </div>
-
-            <style jsx>{`
-                .team-grid {
-                    display: grid;
-                    grid-column-gap: 60px;
-                    grid-row-gap: 60px;
-                    grid-template-columns: auto auto auto;
-                }
-            `}</style>
         </section>
     )
 }
@@ -91,11 +82,18 @@ const Item = ({ name, position, pic }) => {
                     background-repeat: no-repeat;
                     background-size: cover;
                     height: 554px;
-                    width: 349px;
+                    width: 90%;
                     padding: 33px;
                     display: flex;
                     align-items: flex-end;
                     border-radius: 22px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    .avatar-bg {
+                        height: 350px;
+                        width: 260px;
+                    }
                 }
             `}</style>
         </div>

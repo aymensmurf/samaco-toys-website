@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { i18n, withTranslation } from '../i18n'
 
-const Nav = ({ t }) => {
+const Nav = ({ t, isRTL }) => {
     const [index, setIndex] = useState(0)
     const [positions, setPositions] = useState([])
-    const [isRTL, setIsRTL] = useState(false)
 
     const links = [
         {
@@ -58,9 +57,6 @@ const Nav = ({ t }) => {
     ]
 
     useEffect(() => {
-        let isRTL = i18n.language === 'ar' ? true : false;
-        setIsRTL(isRTL)
-
         handleScroll()
         window.addEventListener('scroll', handleScroll)
     }, [])
@@ -109,20 +105,8 @@ const Nav = ({ t }) => {
 
     return (
         <>
-            <nav>
-                {
-                    isRTL ?
-                        <button className='lang' onClick={() => { i18n.changeLanguage('en'); setIsRTL(false) }}>
-                            EN
-                        </button>
-                        :
-                        <button className='lang' onClick={() => { i18n.changeLanguage('ar'); setIsRTL(true) }}>
-                            AR
-                        </button>
-                }
-
-
-                <div className="grid-2">
+            <nav id="my-nav">
+                <div className="nav-grid-2">
                     <div
                         className={`numbers ${isRTL ? 'rtl' : 'ltr'}`}
                         style={{
@@ -173,41 +157,30 @@ const Nav = ({ t }) => {
                 nav {
                     position: fixed;
                     height: 100vh;
-                    width: 200px;
+                    width: 250px;
                     top: 0px;
                     right: ${isRTL ? '0px' : 'auto'};
                     left: ${isRTL ? 'auto' : '0px'};
                 }
 
-                .lang {
-                    position: absolute;
-                    left: ${isRTL ? 'auto' : '28%'};
-                    right: ${isRTL ? '28%' : 'auto'};
-                    top: 65px;
-                    height: 66px;
-                    width: 66px;
-                    background-color: rgba(45, 67, 117, 1);
-                    border: 1px solid white;
-                    border-radius: 66px;
-                    color: white;
-                    font-size: 20px;
-                }
-
-                .grid-2 {
+                .nav-grid-2 {
                     display: grid;
                     grid-template-columns: auto auto;
                     height: 100%;
                 }
 
-                .grid-2 .numbers {
+                .nav-grid-2 .numbers {
                     order: ${isRTL ? 1 : 0};
                 }
-                .grid-2 .menu {
+                .nav-grid-2 .menu {
                     order: ${isRTL ? 0 : 1};
                 }
 
-                button {
-                    cursor: pointer;
+                @media only screen and (max-width: 1023px) {
+                    nav {
+                        display: none;
+                        clear: both;
+                    }
                 }
             `}</style>
         </>
@@ -228,7 +201,7 @@ const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
 
             <style jsx>{`
                 .nav-btn {
-                    padding: 15px 6px;
+                    padding: 10px 6px;
                     border-left: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
                     border-right: ${isRTL ? (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent' : 'none'};
                     cursor: pointer;
@@ -250,7 +223,7 @@ const Number = ({ id, index, isRTL }) => {
 
             <style jsx>{`
                 .number {
-                    padding: 15px 10px;
+                    padding: 10px 10px;
                     padding-left: ${isRTL ? '10px' : '50px'};
                     padding-right: ${isRTL ? '50px' : '10px'};
                     border-right: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};

@@ -4,7 +4,7 @@ import { i18n, withTranslation } from '../../i18n'
 const Contact = ({ t, isRTL }) => {
     return (
         <section id="contact">
-            <div className="contact-grid" style={{ marginTop: 225, marginBottom: 100 }}>
+            <div className="grid-2" style={{ marginTop: 100, marginBottom: 100 }}>
                 <div>
                     <form>
                         <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#CCCCCC', borderRadius: 20, padding: 20 }}>
@@ -14,6 +14,7 @@ const Contact = ({ t, isRTL }) => {
                         </div>
                     </form>
                 </div>
+
                 <div>
                     <h4>{t('saudi_arabia')}</h4>
 
@@ -62,12 +63,6 @@ const Contact = ({ t, isRTL }) => {
                     background-attachment: fixed;
                 }
 
-                .contact-grid {
-                    display: grid;
-                    grid-column-gap: 80px;
-                    grid-template-columns: 50% 50%;
-                }
-
                 input, textarea {
                     font-size: 25px;
                     padding: 30px;
@@ -102,6 +97,24 @@ const Contact = ({ t, isRTL }) => {
 
                 hr {
                     margin: 33px 0px;
+                }
+
+                @media only screen and (max-width: 1300px) {
+                    input, textarea {
+                        font-size: 18px;
+                        padding: 20px;
+                    }
+                }
+
+                @media only screen and (max-width: 425px) {
+                    input, textarea {
+                        font-size: 15px;
+                        padding: 10px;
+                    }
+
+                    p, i {
+                        font-size: 18px;
+                    }
                 }
             `}</style>
         </section>

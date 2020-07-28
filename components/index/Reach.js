@@ -4,9 +4,7 @@ import { i18n, withTranslation } from '../../i18n'
 const Reach = ({ t }) => {
     return (
         <section id="reach">
-            <h2 style={{ marginBottom: 60, marginTop: 200, }}>
-                {t('we_reach')} <span style={{ color: '#EFB71C' }}>{t('every_city')}</span> {t('in_saudi_arabia___')}
-            </h2>
+            <h2>{t('we_reach')} <span style={{ color: '#EFB71C' }}>{t('every_city')}</span> {t('in_saudi_arabia___')}</h2>
 
             <style jsx>{`
                 section {
@@ -16,6 +14,17 @@ const Reach = ({ t }) => {
                     background-size: cover;
                     // background-attachment: fixed;
                     justify-content: flex-start;
+                }
+
+                h2 {
+                    margin-top: 100px;
+                    margin-bottom: 60px;
+                }
+
+                @media only screen and (max-width: 425px) {
+                    h2 {
+                        margin-top: 130px;
+                    }
                 }
             `}</style>
         </section>
