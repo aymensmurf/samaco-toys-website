@@ -37,7 +37,7 @@ const Brands = ({ t }) => {
                 </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button id='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
+                <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
                     {
                         loadMore ? t('show_less') : `${t('load_more')} (+72 ${t('more_brands')})`
                     }
@@ -45,16 +45,6 @@ const Brands = ({ t }) => {
             </div>
 
             <style jsx>{`
-                #btn-load-more {
-                    padding: 30px;
-                    max-width: 756px;
-                    background-color: #CCCCCC;
-                    border-radius: 46px;
-                    border: none;
-                    cursor: pointer;
-                    
-                }
-                
                 h2 {
                     margin-top: 200px;
                     margin-bottom: 150px;
@@ -84,10 +74,6 @@ const Brands = ({ t }) => {
 
                     img {
                         width: 120px;
-                    }
-
-                    #btn-load-more {
-                        padding: 20px 15px;
                     }
                 }
             `}</style>

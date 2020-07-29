@@ -28,7 +28,7 @@ const Index = () => {
         <Reach />
         <Brands />
         <Customers />
-        <Media />
+        <Media isRTL={isRTL}/>
         <Contact isRTL={isRTL} />
       </div>
 

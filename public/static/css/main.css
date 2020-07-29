@@ -133,6 +133,17 @@ button:focus {
     display: block;
 }
 
+/*  */
+
+.btn-load-more {
+    padding: 30px;
+    max-width: 756px;
+    background-color: #cccccc;
+    border-radius: 46px;
+    border: none;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1630px) {
     .grid-3 {
         grid-template-columns: auto auto;
@@ -245,4 +256,18 @@ button:focus {
     button {
         font-size: 18px;
     }
+
+    .btn-load-more {
+        padding: 20px 15px;
+    }
+}
+
+.ReactGridGallery_tile-viewport img {
+    object-fit: cover;
+}
+
+.youtubeContainer iframe {
+    width: 383px;
+    height: 267px;
+    border-radius: 11px;
 }
