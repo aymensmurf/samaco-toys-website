@@ -34,7 +34,7 @@ const Home = ({ t, isRTL }) => {
                 }
 
                 img {
-                    width: 495px;
+                    width: 405px;
                     height: 155px;
                     object-fit: contain;
                     margin-bottom: 52px;

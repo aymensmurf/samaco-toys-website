@@ -13,12 +13,12 @@ const Founder = ({ t, isRTL }) => {
             </div>
 
             <div className="display-special">
+                <h2 style={{ marginBottom: 40 }}>
+                    <span style={{ color: '#EFB71C' }}>{t('mr_ibrahim_hassan_sharbatly')}</span> {t('founder_samcao_first_group')}
+                </h2>
+                
                 <div className="grid-2-special">
                     <div>
-                        <h2 style={{ marginBottom: 40 }}>
-                            <span style={{ color: '#EFB71C' }}>{t('mr_ibrahim_hassan_sharbatly')}</span> {t('founder_samcao_first_group')}
-                        </h2>
-
                         <p>{t('founder_samaco')}</p>
                     </div>
 
@@ -36,20 +36,18 @@ const Founder = ({ t, isRTL }) => {
                     background-position: ${isRTL ? 'bottom left' : 'bottom right'};
                     background-repeat: no-repeat;
                     background-size: cover;
-                    // background-attachment: fixed;
                 }
 
                 .display-special img {
-                    margin-top: 50px;
                     width: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
                 }
 
                 .grid-2-special {
                     display: grid;
                     grid-column-gap: 40px;
                     grid-row-gap: 40px;
-                    grid-template-columns: auto auto;
+                    grid-template-columns: 60% 40%;
                 }
 
                 @media only screen and (max-width: 1490px) {

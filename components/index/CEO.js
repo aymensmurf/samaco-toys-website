@@ -13,12 +13,12 @@ const CEO = ({ t, isRTL }) => {
             </div>
 
             <div className="display-special">
+                <h2 style={{ marginBottom: 40 }}>
+                    <span style={{ color: '#EFB71C' }}>{t('ms_abeer_ibrahim_sharbatly')}</span> {t('ceo_toys_leisure_division')}
+                </h2>
+
                 <div className="grid-2-special">
                     <div>
-                        <h2 style={{ marginBottom: 40 }}>
-                            <span style={{ color: '#EFB71C' }}>{t('ms_abeer_ibrahim_sharbatly')}</span> {t('ceo_toys_leisure_division')}
-                        </h2>
-
                         <p>{t('inspired_by_her_father')}</p>
                     </div>
 
@@ -36,11 +36,9 @@ const CEO = ({ t, isRTL }) => {
                     background-position: ${isRTL ? 'bottom left' : 'bottom right'};
                     background-repeat: no-repeat;
                     background-size: cover;
-                    // background-attachment: fixed;
                 }
 
                 .display-special img {
-                    margin-top: 50px;
                     width: 100%;
                     object-fit: contain;
                 }

@@ -52,17 +52,27 @@ const Brands = ({ t }) => {
                     border-radius: 46px;
                     border: none;
                     cursor: pointer;
+                    
                 }
-
+                
                 h2 {
                     margin-top: 200px;
                     margin-bottom: 150px;
+                }
+                
+                img {
+                    object-fit: contain;
+                }
+
+                @media only screen and (max-width: 1490px) {
+                    img {
+                        width: 200px;
+                    }
                 }
 
                 @media only screen and (max-width: 800px) {
                     img {
                         width: 180px;
-                        object-fit: contain;
                     }
                 }
 
@@ -74,7 +84,6 @@ const Brands = ({ t }) => {
 
                     img {
                         width: 120px;
-                        object-fit: contain;
                     }
 
                     #btn-load-more {

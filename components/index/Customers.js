@@ -56,17 +56,25 @@ const Customers = ({ t }) => {
                     margin-bottom: 60px;
                 }
 
+                img {
+                    object-fit: contain;
+                }
+
+                @media only screen and (max-width: 1490px) {
+                    img {
+                        width: 200px;
+                    }
+                }
+
                 @media only screen and (max-width: 800px) {
                     img {
                         width: 180px;
-                        object-fit: contain;
                     }
                 }
 
                 @media only screen and (max-width: 425px) {
                     img {
                         width: 120px;
-                        object-fit: contain;
                     }
 
                     h2 {
