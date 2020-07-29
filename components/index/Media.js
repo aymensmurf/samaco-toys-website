@@ -2,7 +2,7 @@ import React from 'react'
 import YouTube from 'react-youtube'
 
 import { withTranslation } from '../../i18n'
-import Album from '../widgets/album'
+import Album from '../widgets/Album'
 import { ALBUMS, VIDEOS } from '../../utils/consts'
 
 const Media = ({ t, isRTL }) => {
