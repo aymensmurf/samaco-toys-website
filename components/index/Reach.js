@@ -1,10 +1,13 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import ScrollAnimation from 'react-animate-on-scroll'
+import { withTranslation } from '../../i18n'
 
 const Reach = ({ t }) => {
     return (
         <section id="reach">
-            <h2>{t('we_reach')} <span style={{ color: '#EFB71C' }}>{t('every_city')}</span> {t('in_saudi_arabia___')}</h2>
+            <ScrollAnimation animateIn='fadeInUp'>
+                <h2>{t('we_reach')} <span style={{ color: '#EFB71C' }}>{t('every_city')}</span> {t('in_saudi_arabia___')}</h2>
+            </ScrollAnimation>
 
             <style jsx>{`
                 section {

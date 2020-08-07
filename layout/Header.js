@@ -1,7 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Header = ({ isRTL, handleChangeLang }) => {
     const [isMenuShown, setIsMenuShown] = useState(false);
+    const [isLogoShown, setIsLogoShown] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+
+    })
+
+    const handleScroll = () => {
+        const pos = document.getElementById('about-us')?.offsetTop - 0;
+
+        window.pageYOffset < pos ? setIsLogoShown(false) : setIsLogoShown(true)
+    }
+
 
     const showMenu = () => {
         try {
@@ -31,15 +44,30 @@ const Header = ({ isRTL, handleChangeLang }) => {
     return (
         <>
             <div className={`header ${isRTL ? 'rtl' : 'ltr'}`}>
+
                 <div className="logo" onClick={() => { window.scrollTo(0, 0) }}>
-                    <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
+                    {isLogoShown &&
+                        <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
+                    }
                 </div>
+
+
+
+
                 <div className="social-media" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                     {/* Social Media */}
                     <div className="hide-sm">
-                        <i className="fab fa-instagram"></i>
-                        <i className="fab fa-facebook-f"></i>
-                        <i className="fab fa-twitter"></i>
+                        <a href="#region " className="header-social-box">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                        <a href="#region " className="header-social-box">
+                            <i className="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#region " className="header-social-box">
+                            <i className="fab fa-twitter"></i>
+                        </a>
+
+
                     </div>
 
                     {/* Language */}
@@ -86,6 +114,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
                     width: 161px;
                     height: 50px;
                     object-fit: contain;
+                    cursor: pointer;
                 }
 
                 .header .social-media {
@@ -95,8 +124,14 @@ const Header = ({ isRTL, handleChangeLang }) => {
 
                 i {
                     font-size: 24px;
-                    margin-left: ${isRTL ? '0px' : '40px'};
-                    margin-right: ${isRTL ? '40px' : '0px'};
+                    margin-left: ${isRTL ? '0px' : '30px'};
+                    margin-right: ${isRTL ? '30px' : '0px'};
+                    cursor: pointer;
+                    transition: .3s;
+                }
+
+                i:hover {
+                    color: #EFB71C;
                 }
 
                 .lang {

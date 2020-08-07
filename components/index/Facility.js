@@ -1,17 +1,24 @@
 import React from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import ScrollAnimation from 'react-animate-on-scroll'
+import { withTranslation } from '../../i18n'
 
 const Facility = ({ t }) => {
     return (
         <section id="facility">
             <div>
+            <ScrollAnimation animateIn='fadeInUp'>
                 <h2 style={{ marginBottom: 60 }}>
                     <span style={{ color: '#EFB71C' }}>{t('fully_equipped')}</span> {t('head_office_jeddah___')}
                 </h2>
+            </ScrollAnimation>
 
+            <ScrollAnimation animateIn='fadeInUp'>
                 <p style={{ marginBottom: 30 }}>{t('with_fully_equipped___')}</p>
-
+            </ScrollAnimation>
+            
+            <ScrollAnimation animateIn='fadeInUp'>
                 <p>{t('our_facility_managed___')}</p>
+            </ScrollAnimation>
             </div>
 
             <style jsx>{`

@@ -1,50 +1,57 @@
 import React, { useState } from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 import { withTranslation } from '../../i18n'
 
 const Customers = ({ t }) => {
     const [loadMore, setLoadMore] = useState(false);
 
     return (
-        <section id="customers">
-            <h2>{t('these_are_the')} <span style={{ color: '#EFB71C' }}>{t('lovely_customers')}</span> {t('that_we_work_with')}:</h2>
+        <section id="customers" style={{ paddingBottom: 200 }}>
+            <ScrollAnimation animateIn='fadeInUp'>
+                <h2>{t('some_of_the___')}:</h2>
+            </ScrollAnimation>
 
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
-                <div className='grid-4'>
-                    <img src="/img/customers/toysrus.png" alt="ToysRus" />
-                    <img src="/img/customers/saco.png" alt="Saco" />
-                    <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
-                    <img src="/img/customers/fanateer.png" alt="Fanateer" />
-                    <img src="/img/customers/sprii.png" alt="Sprii" />
-                    <img src="/img/customers/amazon.png" alt="Amazon" />
-                    <img src="/img/customers/noon.png" alt="Noon" />
+            <ScrollAnimation animateIn='fadeInUp'>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
+                    <div className='grid-4'>
+                        <img src="/img/customers/toysrus.png" alt="ToysRus" />
+                        <img src="/img/customers/saco.png" alt="Saco" />
+                        <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
+                        <img src="/img/customers/fanateer.png" alt="Fanateer" />
+                        <img src="/img/customers/sprii.png" alt="Sprii" />
+                        <img src="/img/customers/amazon.png" alt="Amazon" />
+                        <img src="/img/customers/noon.png" alt="Noon" />
 
-                    {
-                        loadMore ?
-                            <>
-                                <img src="/img/customers/toysrus.png" alt="ToysRus" />
-                                <img src="/img/customers/saco.png" alt="Saco" />
-                                <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
-                                <img src="/img/customers/fanateer.png" alt="Fanateer" />
-                                <img src="/img/customers/sprii.png" alt="Sprii" />
-                                <img src="/img/customers/amazon.png" alt="Amazon" />
-                                <img src="/img/customers/noon.png" alt="Noon" />
-                            </>
-                            : null
-                    }
+                        {
+                            loadMore ?
+                                <>
+                                    <img src="/img/customers/toysrus.png" alt="ToysRus" />
+                                    <img src="/img/customers/saco.png" alt="Saco" />
+                                    <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
+                                    <img src="/img/customers/fanateer.png" alt="Fanateer" />
+                                    <img src="/img/customers/sprii.png" alt="Sprii" />
+                                    <img src="/img/customers/amazon.png" alt="Amazon" />
+                                    <img src="/img/customers/noon.png" alt="Noon" />
+                                </>
+                                : null
+                        }
 
+                    </div>
                 </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
-                    {
-                        loadMore ? t('show_less') : `${t('load_more')} (+137 ${t('more_customers')})`
-                    }
-                </button>
-            </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn='fadeInUp'>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
+                        {
+                            loadMore ? t('show_less') : `${t('load_more')} (+137 ${t('more_customers')})`
+                        }
+                    </button>
+                </div>
+            </ScrollAnimation>
 
             <style jsx>{`
                 h2 {
-                    margin-top: 200px;
                     margin-bottom: 60px;
                 }
 

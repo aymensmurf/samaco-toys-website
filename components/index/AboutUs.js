@@ -1,26 +1,36 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 import { withTranslation } from '../../i18n'
 
 const AboutUs = ({ t, isRTL }) => {
     return (
         <section id="about-us">
-            <h2 style={{ marginBottom: 55 }}>
-                <span style={{ color: '#EFB71C' }}>{t('samaco_toys_leisure')}</span> - {t('founding_company_toys_industry')}
-            </h2>
+            <ScrollAnimation animateIn='fadeInUp'>
+                <h2 style={{ marginBottom: 55 }}>
+                    <span style={{ color: '#EFB71C' }}>{t('samaco_toys_leisure')}</span> - {t('founding_company_toys_industry')}
+                </h2>
+            </ScrollAnimation>
 
             <div className='grid-2' style={{ marginBottom: 60, }}>
-                <p>{t('we_have')} <span style={{ color: '#EFB71C' }}>{t('over_four_decades')}</span> {t('long_experience')}</p>
-
-                <p><span style={{ color: '#EFB71C' }}>{t('first_group_international')}</span> {t('initialted_vision_expand')}</p>
+                <ScrollAnimation animateIn='fadeInUp'>
+                    <p>{t('we_have')} <span style={{ color: '#EFB71C' }}>{t('over_four_decades')}</span> {t('long_experience')}</p>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn='fadeInUp'>
+                    <p><span style={{ color: '#EFB71C' }}>{t('first_group_international')}</span> {t('initialted_vision_expand')}</p>
+                </ScrollAnimation>
             </div>
 
-            <h4 style={{marginBottom: 15}}>{t('established')}</h4>
+            <ScrollAnimation animateIn='fadeInUp'>
+                <h4 style={{ marginBottom: 15 }}>{t('established')}</h4>
+            </ScrollAnimation>
 
-            <div className='about-us-grid-3'>
-                <Item title={t('year')} value='1975' />
-                <Item title={t('by')} value={t('al_nahla_group')} />
-                <Item title={t('in')} value={t('jeddah_saudi_arabia')} />
-            </div>
+            <ScrollAnimation animateIn='fadeInUp'>
+                <div className='about-us-grid-3'>
+                    <Item title={t('year')} value='1975' />
+                    <Item title={t('by')} value={t('al_nahla_group')} />
+                    <Item title={t('in')} value={t('jeddah_saudi_arabia')} />
+                </div>
+            </ScrollAnimation>
 
             <style jsx>{`
                 section {

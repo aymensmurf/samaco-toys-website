@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { i18n, withTranslation } from '../../i18n'
+import ScrollAnimation from 'react-animate-on-scroll'
+import { withTranslation } from '../../i18n'
 
 const Philosophy = ({ t }) => {
 
@@ -17,26 +18,32 @@ const Philosophy = ({ t }) => {
         <section id="philosophy">
             <div className="grid-2">
                 <div>
-                    <div style={{ marginBottom: 50 }}>
-                        <h3>{t('our_vision')}</h3>
-                        <p>{t('the_premier_kids___')}</p>
-                    </div>
+                    <ScrollAnimation animateIn='fadeInUp'>
+                        <div style={{ marginBottom: 50 }}>
+                            <h3>{t('our_vision')}</h3>
+                            <p>{t('the_premier_kids___')}</p>
+                        </div>
+                    </ScrollAnimation>
 
-                    <div>
-                        <h3>{t('our_mission')}</h3>
-                        <p>{t('deliver_high_quality___')}</p>
-                        <p>{t('we_belive_toys___')}</p>
-                    </div>
+                    <ScrollAnimation animateIn='fadeInUp'>
+                        <div>
+                            <h3>{t('our_mission')}</h3>
+                            <p>{t('deliver_high_quality___')}</p>
+                            <p>{t('we_belive_toys___')}</p>
+                        </div>
+                    </ScrollAnimation>
                 </div>
 
-                <div>
-                    <h3>{t('our_value')}</h3>
+                <ScrollAnimation animateIn='fadeInUp'>
                     <div>
-                        {
-                            missions.map((elm, i) => <Item key={i} id={i} title={elm} length={missions.length} />)
-                        }
+                        <h3>{t('our_value')}</h3>
+                        <div>
+                            {
+                                missions.map((elm, i) => <Item key={i} id={i} title={elm} length={missions.length} />)
+                            }
+                        </div>
                     </div>
-                </div>
+                </ScrollAnimation>
             </div>
 
             <style jsx>{`

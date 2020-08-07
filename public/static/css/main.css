@@ -1,12 +1,32 @@
 html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory; */
     /* scroll-padding-top: 200px;
     scroll-padding-bottom: 200px; */
+
+    
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 body {
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+
+
     margin: 0;
     overflow-x: hidden;
     color: white;
@@ -17,9 +37,9 @@ section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     scroll-snap-align: start;
-    padding-top: 40px;
+    padding-top: 180px;
     padding-bottom: 40px;
 }
 
@@ -32,7 +52,7 @@ a,
 button,
 input,
 textarea {
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: 400;
@@ -53,7 +73,7 @@ h3 {
 }
 
 h4 {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 70px;
 }
 
@@ -144,6 +164,16 @@ button:focus {
     cursor: pointer;
 }
 
+.ReactGridGallery_tile-viewport img {
+    object-fit: cover;
+}
+
+.youtubeContainer iframe {
+    width: 383px;
+    height: 267px;
+    border-radius: 11px;
+}
+
 @media only screen and (max-width: 1630px) {
     .grid-3 {
         grid-template-columns: auto auto;
@@ -154,6 +184,7 @@ button:focus {
     }
 }
 
+/* Special case */
 @media only screen and (max-width: 1490px) {
     .display-special {
         display: block;
@@ -262,12 +293,14 @@ button:focus {
     }
 }
 
-.ReactGridGallery_tile-viewport img {
-    object-fit: cover;
+@media only screen and (max-width: 320px) {
+    .youtubeContainer iframe {
+        width: 280px;
+    }
 }
 
-.youtubeContainer iframe {
-    width: 383px;
-    height: 267px;
-    border-radius: 11px;
+@media only screen and (max-width: 1440px) {
+    .youtubeContainer iframe {
+        width: 310px;
+    }
 }
