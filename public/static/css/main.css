@@ -5,10 +5,9 @@ html {
     /* scroll-padding-top: 200px;
     scroll-padding-bottom: 200px; */
 
-    
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -23,9 +22,8 @@ body {
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility!important;
-    -webkit-font-smoothing: antialiased!important;
-
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
 
     margin: 0;
     overflow-x: hidden;
@@ -39,7 +37,7 @@ section {
     flex-direction: column;
     justify-content: start;
     scroll-snap-align: start;
-    padding-top: 180px;
+    padding-top: 130px;
     padding-bottom: 40px;
 }
 
@@ -116,22 +114,16 @@ button:focus {
     display: grid;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    grid-template-columns: auto auto;
-}
-
-.grid-3 {
-    display: grid;
-    grid-column-gap: 60px;
-    grid-row-gap: 60px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-4 {
     display: grid;
-    grid-column-gap: 80px;
-    grid-row-gap: 100px;
-    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    justify-content: center;
 }
 
 /*  */
@@ -144,17 +136,7 @@ button:focus {
     clear: both;
 }
 
-.display-special {
-    display: none;
-    clear: both;
-}
-
-.hide-special {
-    display: block;
-}
-
 /*  */
-
 .btn-load-more {
     padding: 30px;
     max-width: 756px;
@@ -169,50 +151,56 @@ button:focus {
 }
 
 .youtubeContainer iframe {
-    width: 383px;
-    height: 267px;
+    width: 100%;
+    height: 247px;
     border-radius: 11px;
 }
 
-@media only screen and (max-width: 1630px) {
-    .grid-3 {
-        grid-template-columns: auto auto;
+@media only screen and (max-width: 1440px) {
+    h1 {
+        font-size: 85px;
     }
 
-    .grid-4 {
-        grid-template-columns: auto auto auto;
-    }
-}
-
-/* Special case */
-@media only screen and (max-width: 1490px) {
-    .display-special {
-        display: block;
+    h2 {
+        font-size: 50px !important;
     }
 
-    .hide-special {
-        display: none;
-        clear: both;
-    }
-}
-
-@media only screen and (max-width: 1300px) {
-    .grid-2 {
-        grid-template-columns: auto;
+    h3 {
+        font-size: 40px;
     }
 
-    .grid-4 {
-        grid-template-columns: auto auto;
+    h4 {
+        font-size: 35px !important;
+        line-height: 50px;
+    }
+
+    p {
+        font-size: 24px;
     }
 }
 
-@media only screen and (max-width: 1150px) {
-    .grid-3 {
-        grid-template-columns: auto;
+@media only screen and (max-width: 1024px) {    
+    h1 {
+        font-size: 80px;
     }
-}
 
-@media only screen and (max-width: 1023px) {
+    h2 {
+        font-size: 45px !important;
+    }
+
+    h3 {
+        font-size: 45px;
+    }
+
+    h4 {
+        font-size: 30px !important;
+        line-height: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
     section,
     .header .logo,
     .header .social-media {
@@ -223,38 +211,26 @@ button:focus {
     .display-menu {
         display: block;
     }
-}
 
-@media only screen and (max-width: 1000px) {
-    .grid-4 {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media only screen and (max-height: 930px) {
-    h1 {
-        font-size: 80px;
-    }
-
-    h2 {
-        font-size: 45px;
-    }
-    h3 {
-        font-size: 40px;
-    }
-    h4 {
-        font-size: 35px;
-        line-height: 45px;
-    }
-
-    p {
-        font-size: 20px;
+    .youtubeContainer iframe {
+        width: 306px;
+        height: 215px;
+        border-radius: 8px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     html {
         scroll-snap-type: none;
+    }
+    .grid-2 {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -274,33 +250,33 @@ button:focus {
     h1 {
         font-size: 50px;
     }
+
     h2 {
-        font-size: 32px;
+        font-size: 30px !important;
     }
+
     h3 {
         font-size: 30px;
     }
+
     h4 {
-        font-size: 28px !important;
+        font-size: 25px !important;
+        line-height: 35px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .btn-load-more {
+        padding: 10px;
     }
 
     button {
         font-size: 18px;
-    }
-
-    .btn-load-more {
-        padding: 20px 15px;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .youtubeContainer iframe {
-        width: 280px;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    .youtubeContainer iframe {
-        width: 310px;
     }
 }

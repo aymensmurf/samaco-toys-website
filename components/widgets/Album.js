@@ -31,21 +31,23 @@ const Album = ({ title, bgImage, images, isRTL }) => {
                         margin-left: ${isRTL ? '15px' : '0px'};
 
                         cursor: pointer;
+                        overflow: hidden;
+                        transition: .5s;
                     }
 
                     .album > div {
-                        background-color:#EFB71C;
-                        width: 160px;
-                        height: 56px;
-                        margin-bottom: 25px;
-                        border-top-right-radius: ${isRTL ? '0px' : '30px'};
-                        border-top-left-radius: ${isRTL ? '30px' : '0px'};
-                        border-bottom-right-radius: ${isRTL ? '0px' : '50px'};
-                        border-bottom-left-radius: ${isRTL ? '50px' : '0px'};
+                        background-color: rgba(239, 183, 28, .85);
+                        width: 100%;
+                        height: 30%;
                         padding: 15px;
                         overflow: hidden;
                         display: flex;
                         align-items: center;
+                        transition: .5s;
+                    }
+
+                    .album:hover > div {
+                        height: 100%;
                     }
 
                     p {

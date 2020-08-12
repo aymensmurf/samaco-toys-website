@@ -13,16 +13,16 @@ const Media = ({ t, isRTL }) => {
                 <h2>{t('pictures')}</h2>
             </ScrollAnimation>
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ marginTop: 30, display: 'flex', flexWrap: 'wrap' }}>
+                <div className='grid_media' style={{ marginTop: 30, display: 'flex', flexWrap: 'wrap' }}>
                     {ALBUMS.map(({ title, bgImage, images }, i) => <Album key={i} title={title} images={images} bgImage={bgImage} isRTL={isRTL} />)}
                 </div>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <h2 style={{ marginTop: 80 }}>{t('videos')}</h2>
+                <h2 style={{ marginTop: 50 }}>{t('videos')}</h2>
             </ScrollAnimation>
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ marginTop: 30, display: 'flex', flexWrap: 'wrap' }}>
+                <div className='grid_media' style={{ marginTop: 30, marginBottom: 70 }}>
                     {VIDEOS.map((id, i) =>
                         <div key={i} className="video">
                             <YouTube videoId={id} containerClassName={"youtubeContainer"} />
@@ -34,11 +34,26 @@ const Media = ({ t, isRTL }) => {
             <style jsx>{`
                 h2 {
                     color: #EFB71C;
+                    font-size: 50px;
                 }
 
-                .video {
-                    margin-bottom: 15px;
-                    margin-right: 15px;
+                .grid_media {
+                    display: grid;
+                    grid-column-gap: 15px;
+                    grid-row-gap: 15px;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media only screen and (max-width: 1023px) {
+                    .grid_media {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media only screen and (max-width: 699px) {
+                    .grid_media {
+                        grid-template-columns: auto;
+                    }
                 }
             `}</style>
         </section>

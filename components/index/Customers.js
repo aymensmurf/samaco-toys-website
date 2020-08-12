@@ -38,9 +38,7 @@ const Customers = ({ t }) => {
 
                     </div>
                 </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animateIn='fadeInUp'>
+                
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
                         {
@@ -52,32 +50,22 @@ const Customers = ({ t }) => {
 
             <style jsx>{`
                 h2 {
-                    margin-bottom: 60px;
+                    margin-bottom: 100px;
                 }
-
+                
                 img {
                     object-fit: contain;
                 }
 
-                @media only screen and (max-width: 1490px) {
+                @media only screen and (max-width: 1440px) {
                     img {
-                        width: 200px;
+                        width: 130px;
                     }
                 }
 
-                @media only screen and (max-width: 800px) {
+                @media only screen and (max-width: 599px) {
                     img {
-                        width: 180px;
-                    }
-                }
-
-                @media only screen and (max-width: 425px) {
-                    img {
-                        width: 120px;
-                    }
-
-                    h2 {
-                        margin-top: 130px;
+                        width: 100px;
                     }
                 }
             `}</style>

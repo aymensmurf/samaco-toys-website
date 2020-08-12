@@ -6,7 +6,7 @@ const Team = ({ t }) => {
     return (
         <section id="team">
             <ScrollAnimation animateIn='fadeInUp'>
-                <h2 style={{ marginBottom: 120 }}>
+                <h2 style={{ marginBottom: 60 }}>
                     {t('we_are')}<span style={{ color: '#EFB71C' }}> {t('multi_cultural_company')}</span>
                 </h2>
             </ScrollAnimation>
@@ -77,7 +77,7 @@ const Team = ({ t }) => {
                     }
                 }
                 
-                @media only screen and (max-width: 425px) {
+                @media only screen and (max-width: 699px) {
                     .team-grid {
                         grid-template-columns: auto;
                     }
@@ -107,7 +107,7 @@ const Item = ({ name, position, pic }) => {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    height: 500px;
+                    height: 400px;
                     width: 80%;
                     padding: 33px;
                     display: flex;

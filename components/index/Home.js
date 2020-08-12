@@ -5,30 +5,32 @@ import { withTranslation } from '../../i18n'
 const Home = ({ t, isRTL }) => {
     return (
         <section id="home">
-            <ScrollAnimation animateIn='fadeInUp'>
-                <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='fadeInUp'>
-                <h1>{t('to_enrich_children_lives')}</h1>
-            </ScrollAnimation>
+            <div style={{marginTop: 50}}>
+                <ScrollAnimation animateIn='fadeInUp'>
+                    <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
+                </ScrollAnimation>
+                <ScrollAnimation animateIn='fadeInUp'>
+                    <h1>{t('to_enrich_children_lives')}</h1>
+                </ScrollAnimation>
 
-            <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ cursor: 'pointer' }} onClick={() => {
-                    try {
-                        let pos = document.getElementById('about-us').offsetTop
-                        window.scrollTo(0, pos)
-                    } catch (error) { }
-                }}>
-                    <div style={{ display: 'flex' }}>
-                        <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
-                        <p style={{
-                            fontSize: 33,
-                            marginLeft: isRTL ? 0 : 20,
-                            marginRight: isRTL ? 20 : 0
-                        }}>{t('explore')}</p>
+                <ScrollAnimation animateIn='fadeInUp'>
+                    <div style={{ cursor: 'pointer' }} onClick={() => {
+                        try {
+                            let pos = document.getElementById('about-us').offsetTop
+                            window.scrollTo(0, pos)
+                        } catch (error) { }
+                    }}>
+                        <div style={{ display: 'flex' }}>
+                            <i className="far fa-arrow-alt-circle-down" style={{ fontSize: 33 }}></i>
+                            <p style={{
+                                fontSize: 33,
+                                marginLeft: isRTL ? 0 : 20,
+                                marginRight: isRTL ? 20 : 0
+                            }}>{t('explore')}</p>
+                        </div>
                     </div>
-                </div>
-            </ScrollAnimation>
+                </ScrollAnimation>
+            </div>
 
             <style jsx>{`
                 section {

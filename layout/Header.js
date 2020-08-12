@@ -12,7 +12,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
     const handleScroll = () => {
         const pos = document.getElementById('about-us')?.offsetTop - 0;
 
-        window.pageYOffset < pos ? setIsLogoShown(false) : setIsLogoShown(true)
+        window.pageYOffset < 300 ? setIsLogoShown(false) : setIsLogoShown(true)
     }
 
 
@@ -24,6 +24,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
             elm.background = '#2d4375'
             elm.width = '100%'
             elm.paddingTop = '120px'
+            elm.zIndex = 99
 
             setIsMenuShown(true)
         } catch (error) { }
@@ -57,13 +58,13 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 <div className="social-media" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                     {/* Social Media */}
                     <div className="hide-sm">
-                        <a href="#region " className="header-social-box">
+                        <a href="#region" className="header-social-box">
                             <i className="fab fa-instagram"></i>
                         </a>
-                        <a href="#region " className="header-social-box">
+                        <a href="#region" className="header-social-box">
                             <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#region " className="header-social-box">
+                        <a href="#region" className="header-social-box">
                             <i className="fab fa-twitter"></i>
                         </a>
 
@@ -99,10 +100,12 @@ const Header = ({ isRTL, handleChangeLang }) => {
                     position: fixed;
                     display: flex;
                     justify-content: space-between;
-                    padding-top: 40px;
-                    padding-bottom: 30px;
+                    padding-top: 20px;
+                    padding-bottom: 50px;
                     width: 100%;
                     z-index: 999;
+                    background: rgb(45,67,117);
+                    background: linear-gradient(180deg, rgba(45,67,117,1) 44%, rgba(255,255,255,0) 100%);
                 }
 
                 .header .logo {
@@ -111,8 +114,8 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 img {
-                    width: 161px;
-                    height: 50px;
+                    width: 130px;
+                    height: 40px;
                     object-fit: contain;
                     cursor: pointer;
                 }
@@ -123,7 +126,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 i {
-                    font-size: 24px;
+                    font-size: 20px;
                     margin-left: ${isRTL ? '0px' : '30px'};
                     margin-right: ${isRTL ? '30px' : '0px'};
                     cursor: pointer;
@@ -135,13 +138,13 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 .lang {
-                    height: 50px;
-                    width: 50px;
+                    height: 40px;
+                    width: 40px;
                     background-color: rgba(45, 67, 117, 1);
                     border: 1px solid white;
                     border-radius: 66px;
                     color: white;
-                    font-size: 20px;
+                    font-size: 18px;
                     cursor: pointer;
                     margin-left: ${isRTL ? '0px' : '40px'};
                     margin-right: ${isRTL ? '40px' : '0px'};

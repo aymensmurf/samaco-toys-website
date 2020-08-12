@@ -5,7 +5,7 @@ import { withTranslation } from '../../i18n'
 const Contact = ({ t, isRTL }) => {
     return (
         <section id="contact">
-            <div className="grid-2" style={{ marginTop: 100, marginBottom: 100 }}>
+            <div className="grid-2">
                 <ScrollAnimation animateIn='fadeInUp'>
                     <div>
                         <form>
@@ -24,7 +24,7 @@ const Contact = ({ t, isRTL }) => {
 
                         <div style={{ display: 'flex', marginBottom: 11 }}>
                             <i className="fas fa-map-marker-alt"></i>
-                            <p>{t('al_safa_district3___')}<br /> {t('po_box_21463')}</p>
+                            <p>{t('al_safa_district3___')}  {t('po_box_21463')}</p>
                         </div>
                         <div style={{ display: 'flex', marginBottom: 11 }}>
                             <i className="fas fa-phone"></i>
@@ -42,7 +42,7 @@ const Contact = ({ t, isRTL }) => {
 
                         <div style={{ display: 'flex', marginBottom: 11 }}>
                             <i className="fas fa-map-marker-alt"></i>
-                            <p>{t('33rd_floor___')} <br />{t('po_box_29244')}</p>
+                            <p>{t('33rd_floor___')}  {t('po_box_29244')}</p>
                         </div>
                         <div style={{ display: 'flex', marginBottom: 11 }}>
                             <i className="fas fa-phone"></i>
@@ -54,18 +54,17 @@ const Contact = ({ t, isRTL }) => {
                         </div>
 
                         <ScrollAnimation animateIn='fadeInUp'>
-                            <div style={{ display: 'flex', marginTop: 75 }}>
+                            <div style={{ display: 'flex', marginTop: 40 }}>
                                 <img src="/img/alnahla-logo.png" alt="AlNahla Group" />
-                                <p style={{ fontSize: 30, marginLeft: isRTL ? 0 : 45, marginRight: isRTL ? 45 : 0 }}>{t('part_of')} <br />{t('al_nahla_group')}</p>
+                                <p style={{ fontSize: 28, marginLeft: isRTL ? 0 : 30, marginRight: isRTL ? 30 : 0 }}>{t('part_of')} {t('al_nahla_group')}</p>
                             </div>
                         </ScrollAnimation>
                     </ScrollAnimation>
                 </div>
             </div>
 
-
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 100 }}>
+                <div className='copy_right' style={{ display: 'flex', justifyContent: 'center', marginTop: 40}}>
                     <p style={{ fontSize: 12 }}>{t('copy_right')} <a href="https://innovant.studio/" style={{ color: '#EFB71C' }}>InnovAnt</a></p>
                 </div>
             </ScrollAnimation>
@@ -99,10 +98,12 @@ const Contact = ({ t, isRTL }) => {
                 h4 { 
                     font-size: 38px;
                     color: #EFB71C;
-                    margin-bottom: 16px;
+                    margin-bottom: 15px;
                 }
 
-                p { font-size: 25px; }
+                p { 
+                    font-size: 20px; 
+                }
 
                 i {
                     color: #847F7F;
@@ -112,7 +113,7 @@ const Contact = ({ t, isRTL }) => {
                 }
 
                 hr {
-                    margin: 33px 0px;
+                    margin: 20px 0px;
                 }
 
                 @media only screen and (max-width: 1300px) {
@@ -130,6 +131,10 @@ const Contact = ({ t, isRTL }) => {
 
                     p, i {
                         font-size: 18px;
+                    }
+
+                    .copy_right {
+                        margin-bottom: 180px;
                     }
                 }
             `}</style>

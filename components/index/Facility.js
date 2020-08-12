@@ -34,7 +34,7 @@ const Facility = ({ t }) => {
                     width: 60%;
                 }
 
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 1024px) {
                     div:first-child{
                         width: 100%;
                     }

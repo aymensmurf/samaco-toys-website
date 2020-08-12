@@ -73,7 +73,7 @@ export const Item = ({ title, value }) => {
     return (
         <div>
             <h4>{title}:</h4>
-            <h4 style={{ color: '#EFB71C', fontWeight: 600 }}>{value}</h4>
+            <h4 style={{ color: '#EFB71C', fontSize: 34, lineHeight: '40px', fontWeight: 600 }}>{value}</h4>
         </div>
     )
 }

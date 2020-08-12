@@ -171,7 +171,7 @@ const Nav = ({ t, isRTL }) => {
                                         index={index}
                                         title={title}
                                         handleClick={() => {
-                                            window.scrollTo(0, positions[i])
+                                            window.scrollTo(0, positions[i] + 10)
                                         }}
                                         isRTL={isRTL}
                                     />
@@ -233,7 +233,7 @@ const Nav = ({ t, isRTL }) => {
                     order: ${isRTL ? 0 : 1};
                 }
                 
-                @media only screen and (max-width: 1023px) {
+                @media only screen and (max-width: 1024px) {
                     nav {
                         display: none;
                         clear: both;

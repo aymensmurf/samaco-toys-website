@@ -6,13 +6,13 @@ const Brands = ({ t }) => {
     const [loadMore, setLoadMore] = useState(false);
 
     return (
-        <section id="brands" style={{ paddingBottom: 400 }}>
+        <section id="brands" style={{ paddingBottom: 100 }}>
             <ScrollAnimation animateIn='fadeInUp'>
                 <h2>{t('we_are_proud')}:</h2>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 100 }}>
                     <div className='grid-4'>
                         <img src="/img/brands/intex.png" alt="Intex" />
                         <img src="/img/brands/step2.png" alt="Step 2" />
@@ -40,9 +40,7 @@ const Brands = ({ t }) => {
 
                     </div>
                 </div>
-            </ScrollAnimation>
 
-            <ScrollAnimation animateIn='fadeInUp'>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
                         {
@@ -54,33 +52,22 @@ const Brands = ({ t }) => {
 
             <style jsx>{`
                 h2 {
-                    margin-bottom: 150px;
+                    margin-bottom: 100px;
                 }
                 
                 img {
                     object-fit: contain;
                 }
 
-                @media only screen and (max-width: 1490px) {
+                @media only screen and (max-width: 1440px) {
                     img {
-                        width: 200px;
+                        width: 130px;
                     }
                 }
-
-                @media only screen and (max-width: 800px) {
+                
+                @media only screen and (max-width: 599px) {
                     img {
-                        width: 180px;
-                    }
-                }
-
-                @media only screen and (max-width: 425px) {
-                    h2 {
-                        margin-top: 130px;
-                        margin-bottom: 80px;
-                    }
-
-                    img {
-                        width: 120px;
+                        width: 100px;
                     }
                 }
             `}</style>

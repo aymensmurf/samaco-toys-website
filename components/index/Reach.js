@@ -20,7 +20,7 @@ const Reach = ({ t }) => {
                 }
 
                 h2 {
-                    margin-top: 100px;
+                    margin-top: 60px;
                     margin-bottom: 60px;
                 }
 

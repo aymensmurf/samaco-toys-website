@@ -16,7 +16,7 @@ const Philosophy = ({ t }) => {
 
     return (
         <section id="philosophy">
-            <div className="grid-2">
+            <div className="philosophy_grid">
                 <div>
                     <ScrollAnimation animateIn='fadeInUp'>
                         <div style={{ marginBottom: 50 }}>
@@ -50,6 +50,19 @@ const Philosophy = ({ t }) => {
                 h3 {
                     color: #EFB71C;
                     margin-bottom: 10px;
+                }
+
+                .philosophy_grid {
+                    display: grid;
+                    grid-column-gap: 30px;
+                    grid-row-gap: 30px;
+                    grid-template-columns: 70% auto;
+                }
+
+                @media only screen and (max-width: 1023px) {
+                    .philosophy_grid{
+                        grid-template-columns: auto;
+                    }
                 }
             `}</style>
         </section>
