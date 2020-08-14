@@ -14,35 +14,36 @@ const Customers = ({ t }) => {
             <ScrollAnimation animateIn='fadeInUp'>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                     <div className='grid-4'>
-                        <img src="/img/customers/toysrus.png" alt="ToysRus" />
-                        <img src="/img/customers/saco.png" alt="Saco" />
-                        <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
-                        <img src="/img/customers/fanateer.png" alt="Fanateer" />
-                        <img src="/img/customers/sprii.png" alt="Sprii" />
-                        <img src="/img/customers/amazon.png" alt="Amazon" />
-                        <img src="/img/customers/noon.png" alt="Noon" />
+                        <img src="/img/customers/baby-island.svg" alt="Baby Island" />
+                        <img src="/img/customers/babyshop.svg" alt="Babyshop" />
+                        <img src="/img/customers/carrefour.svg" alt="Carrefour" />
+                        <img src="/img/customers/hyperpanda.svg" alt="HyperPanda" />
+
+                        <img src="/img/customers/farm-superstores.svg" alt="Farm superstores" />
+                        <img src="/img/customers/tamimi-markets.svg" alt="Tamimi markets" />
+                        <img src="/img/customers/toys-r-us.svg" alt="ToysRus" />
+                        <img src="/img/customers/saco.svg" alt="SACO" />
 
                         {
                             loadMore ?
                                 <>
-                                    <img src="/img/customers/toysrus.png" alt="ToysRus" />
-                                    <img src="/img/customers/saco.png" alt="Saco" />
-                                    <img src="/img/customers/alhussain-toys.png" alt="Alhussain Toys" />
-                                    <img src="/img/customers/fanateer.png" alt="Fanateer" />
-                                    <img src="/img/customers/sprii.png" alt="Sprii" />
-                                    <img src="/img/customers/amazon.png" alt="Amazon" />
-                                    <img src="/img/customers/noon.png" alt="Noon" />
+                                    <img src="/img/customers/alhussain-toys.svg" alt="Alhussain toys" />
+                                    <img src="/img/customers/fanateer.svg" alt="Fanateer" />
+                                    <img src="/img/customers/sprii.svg" alt="Sprii" />
+                                    <img src="/img/customers/amazon.svg" alt="Amazon" />
+
+                                    <img src="/img/customers/noon.svg" alt="Noon" />
                                 </>
                                 : null
                         }
 
                     </div>
                 </div>
-                
+
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <button className='btn-load-more' onClick={() => setLoadMore(!loadMore)}>
                         {
-                            loadMore ? t('show_less') : `${t('load_more')} (+137 ${t('more_customers')})`
+                            loadMore ? t('show_less') : `${t('load_more')} (+5 ${t('more_customers')})`
                         }
                     </button>
                 </div>
@@ -54,6 +55,7 @@ const Customers = ({ t }) => {
                 }
                 
                 img {
+                    width: 160px;
                     object-fit: contain;
                 }
 

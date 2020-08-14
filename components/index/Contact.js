@@ -121,6 +121,10 @@ const Contact = ({ t, isRTL }) => {
                         font-size: 18px;
                         padding: 20px;
                     }
+
+                    .copy_right {
+                        margin-bottom: 180px;
+                    }
                 }
 
                 @media only screen and (max-width: 425px) {

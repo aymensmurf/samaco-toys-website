@@ -2,10 +2,18 @@ import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { withTranslation } from '../../i18n'
 
+if (process.browser) {
+    document.getElementById('homeVideo').play();
+}
+
 const Home = ({ t, isRTL }) => {
     return (
         <section id="home">
-            <div style={{marginTop: 50}}>
+            <video id="homeVideo" preload="true" autoplay loop muted>
+                <source src="/videos/home.mp4" type="video/mp4" />
+            </video>
+
+            <div style={{ marginTop: 50, zIndex: 2 }}>
                 <ScrollAnimation animateIn='fadeInUp'>
                     <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
                 </ScrollAnimation>
@@ -39,6 +47,17 @@ const Home = ({ t, isRTL }) => {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-attachment: fixed;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                video {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    z-index: 1;
                 }
 
                 img {

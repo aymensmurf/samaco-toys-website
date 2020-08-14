@@ -218,6 +218,7 @@ const Nav = ({ t, isRTL }) => {
                     top: 0px;
                     right: ${isRTL ? '0px' : 'auto'};
                     left: ${isRTL ? 'auto' : '0px'};
+                    z-index: 99;
                 }
 
                 .nav-grid-2 {
