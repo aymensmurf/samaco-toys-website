@@ -233,6 +233,11 @@ const Nav = ({ t, isRTL }) => {
                 .nav-grid-2 .menu {
                     order: ${isRTL ? 0 : 1};
                 }
+
+                .fix-nav-border {
+                    margin-right: ${isRTL ? '1px' : '0px'};
+                    margin-left: ${isRTL ? '0px' : '1px'};
+                }
                 
                 @media only screen and (max-width: 1024px) {
                     nav {

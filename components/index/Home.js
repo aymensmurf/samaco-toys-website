@@ -15,7 +15,7 @@ const Home = ({ t, isRTL }) => {
 
             <div style={{ marginTop: 50, zIndex: 2 }}>
                 <ScrollAnimation animateIn='fadeInUp'>
-                    <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
+                    <img src="/img/logo.svg" alt="SAMACO TOYS & LEISURE" />
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='fadeInUp'>
                     <h1>{t('to_enrich_children_lives')}</h1>
@@ -61,8 +61,8 @@ const Home = ({ t, isRTL }) => {
                 }
 
                 img {
-                    width: 405px;
-                    height: 155px;
+                    width: 370px;
+                    height: 170px;
                     object-fit: contain;
                     margin-bottom: 52px;
 
@@ -75,8 +75,8 @@ const Home = ({ t, isRTL }) => {
 
                 @media only screen and (max-width: 1440px) {
                     img {
-                        width: 300px;
-                        height: 100px;
+                        width: 370px;
+                        height: 170px;
                         margin-bottom: 20px;
                     }
 

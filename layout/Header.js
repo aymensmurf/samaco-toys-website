@@ -48,7 +48,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
 
                 <div className="logo" onClick={() => { window.scrollTo(0, 0) }}>
                     {isLogoShown &&
-                        <img src="/img/logo.png" alt="SAMACO TOYS & LEISURE" />
+                        <img src="/img/logo.svg" alt="SAMACO TOYS & LEISURE" />
                     }
                 </div>
 
@@ -114,8 +114,8 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 img {
-                    width: 130px;
-                    height: 40px;
+                    width: 100px;
+                    height: 45px;
                     object-fit: contain;
                     cursor: pointer;
                 }
@@ -159,7 +159,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
 
                 @media only screen and (max-width: 425px) {
                     img {
-                        width: 120px;
+                        width: 100px;
                     }
                 }
             `}</style>
