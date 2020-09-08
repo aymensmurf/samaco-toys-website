@@ -100,7 +100,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
                     position: fixed;
                     display: flex;
                     justify-content: space-between;
-                    padding-top: 20px;
+                    padding-top: 16px;
                     padding-bottom: 50px;
                     width: 100%;
                     z-index: 999;
@@ -114,8 +114,8 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 img {
-                    width: 100px;
-                    height: 45px;
+                    width: 115px;
+                    height: 48px;
                     object-fit: contain;
                     cursor: pointer;
                 }
@@ -138,16 +138,16 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 }
 
                 .lang {
-                    height: 40px;
-                    width: 40px;
+                    height: 35px;
+                    width: 35px;
                     background-color: rgba(45, 67, 117, 1);
                     border: 1px solid white;
                     border-radius: 66px;
                     color: white;
-                    font-size: 18px;
+                    font-size: 16px;
                     cursor: pointer;
-                    margin-left: ${isRTL ? '0px' : '40px'};
-                    margin-right: ${isRTL ? '40px' : '0px'};
+                    margin-left: ${isRTL ? '0px' : '30px'};
+                    margin-right: ${isRTL ? '30px' : '0px'};
                 }
 
                 @media only screen and (max-width: 600px) {

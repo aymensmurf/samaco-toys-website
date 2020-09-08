@@ -105,109 +105,21 @@ const Nav = ({ t, isRTL }) => {
 
     return (
         <>
-            <nav id="my-nav">
-                <div style={{
-                    height: '100%',
-                    display: "grid",
-                    gridTemplateRows: 'repeat(3, 1fr)'
-                }}>
-                    <div className="fix-nav-border">
-                        <div className="nav-grid-2">
-                            <div>
-                                <div style={{
-                                    borderRight: '4px solid #EFB71C',
-                                    height: '100%'
-                                }} />
-                            </div>
-                            <div>
-                                <div
-                                    style={{
-                                        borderLeft: '1px solid white',
-                                        height: '100%'
-                                    }}>
-                                    <div style={{
-                                        borderLeft: '4px solid #EFB71C',
-                                        height: '100%'
-                                    }} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="nav-grid-2">
-                        <div
-                            className={`numbers ${isRTL ? 'rtl' : 'ltr'}`}
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                position: 'relative'
-                            }}>
-                            {links.map(
-                                ({ title }, i) =>
-                                    <Number
-                                        key={i}
-                                        id={i}
-                                        index={index}
-                                        isRTL={isRTL}
-                                    />
-                            )}
-                        </div>
-                        <div
-                            className={`menu ${isRTL ? 'rtl' : 'ltr'}`}
-                            style={{
-                                borderLeft: isRTL ? 'none' : '1px solid white',
-                                borderRight: isRTL ? '1px solid white' : 'none',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center'
-                            }}>
-                            {
-                                links.map(({ title }, i) =>
-                                    <NavBtn
-                                        key={i}
-                                        id={i}
-                                        index={index}
-                                        title={title}
-                                        handleClick={() => {
-                                            window.scrollTo(0, positions[i] + 10)
-                                        }}
-                                        isRTL={isRTL}
-                                    />
-                                )
-                            }
-                        </div>
-                    </div>
-
-
-                    <div className="fix-nav-border">
-                        <div className="nav-grid-2">
-                            <div>
-                                {index === links.length - 1 &&
-                                    <div style={{
-                                        borderRight: '4px solid #EFB71C',
-                                        height: '100%'
-                                    }} />
-                                }
-                            </div>
-                            <div>
-                                <div
-                                    style={{
-                                        borderLeft: '1px solid white',
-                                        height: '100%'
-                                    }}>
-                                    {index === links.length - 1 &&
-                                        <div style={{
-                                            borderLeft: '4px solid #EFB71C',
-                                            height: '100%'
-                                        }} />
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <nav id="my-nav" className={`${isRTL ? 'rtl' : 'ltr'}`}>
+                {
+                    links.map(({ title }, i) =>
+                        <NavBtn
+                            key={i}
+                            id={i}
+                            index={index}
+                            title={title}
+                            handleClick={() => {
+                                window.scrollTo(0, positions[i] + 10)
+                            }}
+                            isRTL={isRTL}
+                        />
+                    )
+                }
             </nav>
 
             <style jsx>{`
@@ -216,27 +128,12 @@ const Nav = ({ t, isRTL }) => {
                     height: 100vh;
                     width: 250px;
                     top: 0px;
-                    right: ${isRTL ? '0px' : 'auto'};
-                    left: ${isRTL ? 'auto' : '0px'};
+                    right: ${isRTL ? '20px' : 'auto'};
+                    left: ${isRTL ? 'auto' : '20px'};
                     z-index: 99;
-                }
-
-                .nav-grid-2 {
-                    display: grid;
-                    grid-template-columns: ${isRTL ? '67% 33%' : '33% 67%'};
-                    height: 100%;
-                }
-
-                .nav-grid-2 .numbers {
-                    order: ${isRTL ? 1 : 0};
-                }
-                .nav-grid-2 .menu {
-                    order: ${isRTL ? 0 : 1};
-                }
-
-                .fix-nav-border {
-                    margin-right: ${isRTL ? '1px' : '0px'};
-                    margin-left: ${isRTL ? '0px' : '1px'};
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
                 
                 @media only screen and (max-width: 1024px) {
@@ -261,13 +158,14 @@ export default withTranslation('nav')(Nav)
 const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
     return (
         <div className="nav-btn" onClick={handleClick}>
-            <p>{title}</p>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <i className="fas fa-circle" />
+                <p>{title}</p>
+            </div>
 
             <style jsx>{`
                 .nav-btn {
-                    padding: 10px 6px;
-                    border-left: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
-                    border-right: ${isRTL ? (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent' : 'none'};
+                    padding: 4px 6px;
                     cursor: pointer;
                     transition: .5s;
                 }
@@ -277,51 +175,19 @@ const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
                     padding-left:  ${isRTL ? '0px' : '12px'};
                 }
 
-                p {
+                .nav-btn i {
+                    font-size: 8px;
+                    margin-right: ${isRTL ? '0px' : '12px'};
+                    margin-left:  ${isRTL ? '12px' : '0px'};
+                }
+
+                p, i {
                     color: ${(index == id) ? '#fff' : '#847F7F'};
                     font-size: 20px;
                 }
                 
                 @media only screen and (max-width: 1440px) {
                     .nav-btn {
-                        padding: 6px;
-                    }
-
-                    p {
-                        font-size: 16px;
-                    }
-                }
-            `}</style>
-        </div>
-    )
-}
-
-const Number = ({ id, index, isRTL }) => {
-    return (
-        <div className="number">
-            <p>{(id + 1 < 10) ? `0${id + 1}` : id + 1}</p>
-
-            <style jsx>{`
-                .number {
-                    padding: 10px 6px;
-                    padding-left: ${isRTL ? '6px' : '50px'};
-                    padding-right: ${isRTL ? '50px' : '6px'};
-                    border-right: ${isRTL ? 'none' : (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent'};
-                    border-left: ${isRTL ? (id >= 0) && (id <= index) ? '4px solid #EFB71C' : '4px solid transparent' : 'none'};
-                    text-align: center;
-                    transition: .5s;
-                    display: flex;
-                    justify-content: flex-end;
-                }
-
-                p {
-                    color: ${(index == id) ? '#fff' : '#847F7F'};
-                    font-size: 20px;
-                    transform: rotate(270deg);
-                }
-                
-                @media only screen and (max-width: 1440px) {
-                    .number {
                         padding: 6px;
                     }
 

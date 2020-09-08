@@ -113,6 +113,12 @@ const Item = ({ name, position, pic }) => {
                     display: flex;
                     align-items: flex-end;
                     border-radius: 22px;
+                }                
+
+                @media only screen and (max-height: 760px) {
+                    .avatar-bg {
+                        height: 300px;
+                    }
                 }
 
                 @media only screen and (max-width: 600px) {

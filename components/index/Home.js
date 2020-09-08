@@ -73,7 +73,7 @@ const Home = ({ t, isRTL }) => {
                     margin-bottom: 50px;
                 }
 
-                @media only screen and (max-width: 1440px) {
+                @media only screen and (max-width: 1600px) {
                     img {
                         width: 370px;
                         height: 170px;
