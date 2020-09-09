@@ -54,9 +54,9 @@ const Contact = ({ t, isRTL }) => {
                         </div>
 
                         <ScrollAnimation animateIn='fadeInUp'>
-                            <div style={{ display: 'flex', marginTop: 40 }}>
-                                <img src="/img/alnahla-logo.png" alt="AlNahla Group" />
-                                <p style={{ fontSize: 28, marginLeft: isRTL ? 0 : 30, marginRight: isRTL ? 30 : 0 }}>{t('part_of')} {t('al_nahla_group')}</p>
+                            <div id="alNahla" style={{ display: 'flex', marginTop: 40 }}>
+                                <a href="https://www.alnahlagroup.com/" target="_blank" rel="noopener noreferrer"><img src="/img/alnahla-logo.png" alt="AlNahla Group" /></a>
+                                <a href="https://www.alnahlagroup.com/" target="_blank" rel="noopener noreferrer"><p style={{ fontSize: 28, marginLeft: isRTL ? 0 : 30, marginRight: isRTL ? 30 : 0 }}>{t('part_of')} {t('al_nahla_group')}</p></a>
                             </div>
                         </ScrollAnimation>
                     </ScrollAnimation>
@@ -64,7 +64,7 @@ const Contact = ({ t, isRTL }) => {
             </div>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <div className='copy_right' style={{ display: 'flex', justifyContent: 'center', marginTop: 40}}>
+                <div className='copy_right' style={{ display: 'flex', justifyContent: 'center', marginTop: 40 }}>
                     <p style={{ fontSize: 12 }}>{t('copy_right')} <a href="https://innovant.studio/" style={{ color: '#EFB71C' }}>InnovAnt</a></p>
                 </div>
             </ScrollAnimation>
@@ -116,10 +116,28 @@ const Contact = ({ t, isRTL }) => {
                     margin: 20px 0px;
                 }
 
-                @media only screen and (max-width: 1300px) {
+                @media only screen and (max-width: 1600px) {
+                    h4 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    #alNahla img {
+                        width: 71px;
+                        height: 80px;
+                        object-fit: contain;
+                    }
+
+                    #alNahla p {
+                        font-size: 24px !important;
+                    }
+
                     input, textarea {
-                        font-size: 18px;
-                        padding: 20px;
+                        font-size: 16px;
+                        padding: 15px;
                     }
 
                     .copy_right {

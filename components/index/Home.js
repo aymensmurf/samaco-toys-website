@@ -9,7 +9,9 @@ if (process.browser) {
 const Home = ({ t, isRTL }) => {
     return (
         <section id="home">
-            <video id="homeVideo" preload="true" autoplay loop muted>
+            <div className="overlay"></div>
+
+            <video id="homeVideo" preload="true" autoPlay loop muted>
                 <source src="/videos/home.mp4" type="video/mp4" />
             </video>
 
@@ -58,6 +60,15 @@ const Home = ({ t, isRTL }) => {
                     min-width: 100%;
                     min-height: 100%;
                     z-index: 1;
+                }
+
+                .overlay {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    z-index: 2;
                 }
 
                 img {

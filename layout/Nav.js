@@ -158,7 +158,7 @@ export default withTranslation('nav')(Nav)
 const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
     return (
         <div className="nav-btn" onClick={handleClick}>
-            <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
                 <i className="fas fa-circle" />
                 <p>{title}</p>
             </div>
@@ -186,7 +186,7 @@ const NavBtn = ({ id, index, title, handleClick, isRTL }) => {
                     font-size: 20px;
                 }
                 
-                @media only screen and (max-width: 1440px) {
+                @media only screen and (max-width: 1600px) {
                     .nav-btn {
                         padding: 6px;
                     }

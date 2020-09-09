@@ -59,7 +59,61 @@ export const ALBUMS = [
 
 
 export const VIDEOS = [
-    'b1FB8jwCBEA',
-    '2CiyLIKWo48',
-    'xNaQ1WWULXU'
+    {
+        id: "b1FB8jwCBEA",
+        title: "مبادرة مؤسسة حسن عباس شربتلي لتعقيم المساجد وغسيل سجادها للوقاية من فيروس كورونا",
+        bgImage: "/img/thambnails/default.png"
+    },
+    {
+        id: "xNaQ1WWULXU",
+        title: "مشاركة فريق النهلة بنتلي في بطولة العلا لبولو الصحراء - شتاء طنطورة",
+        bgImage: "/img/thambnails/default.png"
+    },
+    {
+        id: "2CiyLIKWo48",
+        title: "مشاركة ساماكو الألعاب والترفيه | مهرجان الرياض للألعاب 2019",
+        bgImage: "/img/thambnails/default.png"
+    },
+]
+
+export const BRANDS = [
+    "maisto",
+    "burago",
+    "our-generation",
+    "lil-woodzeez",
+    "dolls-world",
+    "bildo",
+    "oops",
+    "intex",
+    "step2",
+    "nikko",
+    "terra",
+    "btoys",
+    "craze",
+    "madmattr",
+    "funny-box",
+    "splash-toys",
+    "educa",
+    "plum",
+    "feber",
+    "national-geographic",
+    "banzai",
+    "mondo",
+]
+
+export const CUSTOMERS = [
+    "baby-island",
+    "babyshop",
+    "carrefour",
+    "hyperpanda",
+    "farm-superstores",
+    "tamimi-markets",
+    "toys-r-us",
+    "saco",
+    "alhussain-toys",
+    "fanateer",
+    "sprii",
+    "amazon",
+    "noon",
+    "lulu",
 ]

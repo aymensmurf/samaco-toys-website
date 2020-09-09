@@ -1,10 +1,10 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
-import YouTube from 'react-youtube'
 
 import { withTranslation } from '../../i18n'
 import Album from '../widgets/Album'
 import { ALBUMS, VIDEOS } from '../../utils/consts'
+import Video from '../widgets/Video'
 
 const Media = ({ t, isRTL }) => {
     return (
@@ -13,20 +13,18 @@ const Media = ({ t, isRTL }) => {
                 <h2>{t('pictures')}</h2>
             </ScrollAnimation>
             <ScrollAnimation animateIn='fadeInUp'>
-                <div className='grid_media' style={{ marginTop: 30, display: 'flex', flexWrap: 'wrap' }}>
+                <div className='grid_media' style={{ marginTop: 15, display: 'flex', flexWrap: 'wrap' }}>
                     {ALBUMS.map(({ title, bgImage, images }, i) => <Album key={i} title={title} images={images} bgImage={bgImage} isRTL={isRTL} />)}
                 </div>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <h2 style={{ marginTop: 50 }}>{t('videos')}</h2>
+                <h2 style={{ marginTop: 20 }}>{t('videos')}</h2>
             </ScrollAnimation>
             <ScrollAnimation animateIn='fadeInUp'>
-                <div className='grid_media' style={{ marginTop: 30, marginBottom: 70 }}>
-                    {VIDEOS.map((id, i) =>
-                        <div key={i} className="video">
-                            <YouTube videoId={id} containerClassName={"youtubeContainer"} />
-                        </div>
+                <div className='grid_media' style={{ marginTop: 15, marginBottom: 110 }}>
+                    {VIDEOS.map(({id, title, bgImage}) =>
+                        <Video key={id} id={id} title={title} bgImage={bgImage} isRTL={isRTL} />
                     )}
                 </div>
             </ScrollAnimation>
