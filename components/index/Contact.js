@@ -55,7 +55,13 @@ const Contact = ({ t, isRTL }) => {
 
                         <ScrollAnimation animateIn='fadeInUp'>
                             <div id="alNahla" style={{ display: 'flex', marginTop: 40 }}>
-                                <a href="https://www.alnahlagroup.com/" target="_blank" rel="noopener noreferrer"><img src="/img/alnahla-logo.png" alt="AlNahla Group" /></a>
+                                <a href="https://www.alnahlagroup.com/" target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        src="/img/alnahla-logo.png"
+                                        alt="AlNahla Group"
+                                        onMouseOver={e => e.currentTarget.src = "/img/alnahla-logo-c.png"}
+                                        onMouseOut={e => e.currentTarget.src = "/img/alnahla-logo.png"} />
+                                </a>
                                 <a href="https://www.alnahlagroup.com/" target="_blank" rel="noopener noreferrer"><p style={{ fontSize: 28, marginLeft: isRTL ? 0 : 30, marginRight: isRTL ? 30 : 0 }}>{t('part_of')} {t('al_nahla_group')}</p></a>
                             </div>
                         </ScrollAnimation>
