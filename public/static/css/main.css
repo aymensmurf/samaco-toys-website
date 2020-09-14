@@ -4,7 +4,6 @@ html {
     /* scroll-snap-type: y mandatory; */
     /* scroll-padding-top: 200px;
     scroll-padding-bottom: 200px; */
-
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -12,7 +11,8 @@ html {
 
 ::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
+    /* make scrollbar transparent */
 }
 
 body {
@@ -24,7 +24,6 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-
     margin: 0;
     overflow-x: hidden;
     color: white;
@@ -50,7 +49,7 @@ a,
 button,
 input,
 textarea {
-    font-family: 'Tajawal', sans-serif;
+    font-family: "Tajawal", sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: 400;
@@ -108,6 +107,7 @@ button:focus {
     text-align: left;
 }
 
+
 /* GRID */
 
 .grid-2 {
@@ -119,14 +119,16 @@ button:focus {
 
 .grid-4 {
     display: grid;
-    grid-column-gap: 60px;
-    grid-row-gap: 60px;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
 }
 
+
 /*  */
+
 .hide-sm {
     display: block;
 }
@@ -136,9 +138,11 @@ button:focus {
     clear: both;
 }
 
+
 /*  */
+
 .btn-load-more {
-    padding: 30px;
+    padding: 20px;
     max-width: 756px;
     background-color: #cccccc;
     border-radius: 46px;
@@ -167,58 +171,47 @@ button:focus {
     h1 {
         font-size: 85px;
     }
-
     h2 {
         font-size: 50px !important;
     }
-
     h3 {
         font-size: 40px;
     }
-
     h4 {
         font-size: 35px !important;
         line-height: 50px;
     }
-
     p {
         font-size: 24px;
     }
 }
 
-@media only screen and (max-width: 1024px) {    
+@media only screen and (max-width: 1024px) {
     h1 {
         font-size: 80px;
     }
-
     h2 {
         font-size: 45px !important;
     }
-
     h3 {
-        font-size: 45px;
+        font-size: 35px;
     }
-
     h4 {
         font-size: 30px !important;
         line-height: 35px;
     }
-
     p {
         font-size: 20px;
     }
-
     section,
     .header .logo,
     .header .social-media {
         padding-right: 30px !important;
         padding-left: 30px !important;
     }
-
     .display-menu {
         display: block;
     }
-
     .youtubeContainer iframe {
         width: 306px;
         height: 215px;
@@ -246,7 +239,6 @@ button:focus {
         display: none;
         clear: both;
     }
-
     section {
         padding-top: 120px;
         /* padding-bottom: 40px; */
@@ -257,32 +249,25 @@ button:focus {
     h1 {
         font-size: 50px;
     }
-
     h2 {
         font-size: 30px !important;
     }
-
     h3 {
         font-size: 30px;
     }
-
     h4 {
         font-size: 25px !important;
         line-height: 35px;
     }
-
     p {
         font-size: 18px;
     }
-
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .btn-load-more {
         padding: 10px;
     }
-
     button {
         font-size: 18px;
     }

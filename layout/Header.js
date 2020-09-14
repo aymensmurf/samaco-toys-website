@@ -65,7 +65,7 @@ const Header = ({ isRTL, handleChangeLang }) => {
                             <i className="fab fa-facebook-f"></i>
                         </a>
                         <a href="#region" className="header-social-box">
-                            <i className="fab fa-twitter"></i>
+                            <i className="fab fa-youtube"></i>
                         </a>
 
 

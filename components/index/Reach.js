@@ -20,14 +20,14 @@ const Reach = ({ t }) => {
                 }
 
                 h2 {
-                    margin-top: 40px;
-                    margin-bottom: 60px;
+                    margin-top: 0px !important;
+                   font-size: 50px !important;
                 }
 
                 @media only screen and (max-width: 1600px) {
                     h2 {
-                        margin-top: 20px;
-                        font-size: 40px !important;
+                        margin-top: 0px !important;
+                        font-size: 35px !important;
                     }
                 }
 

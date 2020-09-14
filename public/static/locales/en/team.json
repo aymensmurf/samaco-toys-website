@@ -1,4 +1,22 @@
 {
     "we_are": "We are",
-    "multi_cultural_company": "a multicultural company."
+    "multi_cultural_company": "a multicultural company.",
+    "yasser_tamar": "Yasser Tamar",
+    "yasser_tamar_pos": "General Manager",
+    "ahmed_derham": "Ahmed Derham",
+    "ahmed_derham_pos": "Sales Manager",
+    "mazhar_khan": "Mazher Khan",
+    "mazhar_khan_pos": "Marketing Manager",
+    "anas_vadakkengara": "Anas Vadakkengara",
+    "anas_vadakkengara_pos": "CEO Assistant",
+    "alaa_abu_alhassan": "Alaa Abu Alhasan",
+    "alaa_abu_alhassan_pos": "Sales Devel. Manager",
+    "khunji_erukat": "Khunji Erukat",
+    "khunji_erukat_pos": "INTEX Manager",
+    "ahmed_abdoun": "Ahmed Abdoun",
+    "ahmed_abdoun_pos": "Finance Manager",
+    "muhammad_islam": "Muhammad Islam",
+    "muhammad_islam_pos": "Procurement Manager",
+    "abdu_ahmed_utif": "Abdu Ahmed Utif",
+    "abdu_ahmed_utif_pos": "Administrative Officer"
 }

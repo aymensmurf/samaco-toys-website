@@ -15,48 +15,48 @@ const Team = ({ t }) => {
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
                     <div className='team-grid'>
                         <Item
-                            name='Yasser Tamar'
-                            position='General Manager'
+                            name={t('yasser_tamar')}
+                            position={t('yasser_tamar_pos')}
                             pic='yasser-tamar'
                         />
                         <Item
-                            name='Ahmed Derham'
-                            position='Sales Manager'
+                            name={t('ahmed_derham')}
+                            position={t('ahmed_derham_pos')}
                             pic='ahmed-derham'
                         />
                         <Item
-                            name='Mazher Khan'
-                            position='Marketing Manager'
+                            name={t('mazhar_khan')}
+                            position={t('mazhar_khan_pos')}
                             pic='mazher-khan'
                         />
                         <Item
-                            name='Anas Vadakkengara'
-                            position='CEO Assistant'
+                            name={t('anas_vadakkengara')}
+                            position={t('anas_vadakkengara_pos')}
                             pic='anas-vadakkengara'
                         />
                         <Item
-                            name='Alaa Abu Alhasan'
-                            position='Sales Devel. Manager'
+                            name={t('alaa_abu_alhassan')}
+                            position={t('alaa_abu_alhassan_pos')}
                             pic='alaa-abu-alhasan'
                         />
                         <Item
-                            name='Khunji Erukat'
-                            position='INTEX Manager'
+                            name={t('khunji_erukat')}
+                            position={t('khunji_erukat_pos')}
                             pic='khunji-erukat'
                         />
                         <Item
-                            name='Ahmed Abdoun'
-                            position='Finance Manager'
+                            name={t('ahmed_abdoun')}
+                            position={t('ahmed_abdoun_pos')}
                             pic='ahmed-abdoun'
                         />
                         <Item
-                            name='Muhammad Islam'
-                            position='Procurement Manager'
+                            name={t('muhammad_islam')}
+                            position={t('muhammad_islam_pos')}
                             pic='muhammad-islam'
                         />
                         <Item
-                            name='Abdu Ahmed Utif'
-                            position='Administrative Officer'
+                            name={t('abdu_ahmed_utif')}
+                            position={t('abdu_ahmed_utif_pos')}
                             pic='abdu-ahmed-utif'
                         />
                     </div>

@@ -8,13 +8,13 @@ const Customers = ({ t }) => {
     const [loadMore, setLoadMore] = useState(false);
 
     return (
-        <section id="customers" style={{ paddingBottom: 200 }}>
+        <section id="customers" style={{ paddingBottom: 100 }}>
             <ScrollAnimation animateIn='fadeInUp'>
                 <h2>{t('some_of_the___')}:</h2>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 150 }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 50 }}>
                     <div className='grid-4'>
                         {
                             CUSTOMERS.map((customer, i) => {
@@ -42,24 +42,7 @@ const Customers = ({ t }) => {
 
             <style jsx>{`
                 h2 {
-                    margin-bottom: 100px;
-                }
-                
-                img {
-                    width: 160px;
-                    object-fit: contain;
-                }
-
-                @media only screen and (max-width: 1600px) {
-                    img {
-                        width: 130px;
-                    }
-                }
-
-                @media only screen and (max-width: 599px) {
-                    img {
-                        width: 100px;
-                    }
+                    margin-bottom: 50px;
                 }
             `}</style>
         </section>

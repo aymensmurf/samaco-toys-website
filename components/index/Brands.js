@@ -14,7 +14,7 @@ const Brands = ({ t }) => {
             </ScrollAnimation>
 
             <ScrollAnimation animateIn='fadeInUp'>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 100 }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 50 }}>
                     <div className='grid-4'>
                         {
                             BRANDS.map((brand, i) => {
@@ -42,7 +42,7 @@ const Brands = ({ t }) => {
 
             <style jsx>{`
                 h2 {
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
                 }
             `}</style>
         </section>
