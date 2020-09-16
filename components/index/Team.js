@@ -30,6 +30,16 @@ const Team = ({ t }) => {
                             pic='mazher-khan'
                         />
                         <Item
+                            name={t('ahmed_abdoun')}
+                            position={t('ahmed_abdoun_pos')}
+                            pic='ahmed-abdoun'
+                        />
+                        <Item
+                            name={t('muhammad_islam')}
+                            position={t('muhammad_islam_pos')}
+                            pic='muhammad-islam'
+                        />
+                        <Item
                             name={t('anas_vadakkengara')}
                             position={t('anas_vadakkengara_pos')}
                             pic='anas-vadakkengara'
@@ -43,16 +53,6 @@ const Team = ({ t }) => {
                             name={t('khunji_erukat')}
                             position={t('khunji_erukat_pos')}
                             pic='khunji-erukat'
-                        />
-                        <Item
-                            name={t('ahmed_abdoun')}
-                            position={t('ahmed_abdoun_pos')}
-                            pic='ahmed-abdoun'
-                        />
-                        <Item
-                            name={t('muhammad_islam')}
-                            position={t('muhammad_islam_pos')}
-                            pic='muhammad-islam'
                         />
                         <Item
                             name={t('abdu_ahmed_utif')}
