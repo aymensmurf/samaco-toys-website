@@ -58,13 +58,13 @@ const Header = ({ isRTL, handleChangeLang }) => {
                 <div className="social-media" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                     {/* Social Media */}
                     <div className="hide-sm">
-                        <a href="#region" className="header-social-box">
+                        <a href="https://www.instagram.com/samacotoy/" target="_blank" rel="noopener noreferrer" className="header-social-box">
                             <i className="fab fa-instagram"></i>
                         </a>
-                        <a href="#region" className="header-social-box">
+                        <a href="https://www.facebook.com/samacotoys/?refid=52&__tn__=C-R" target="_blank" rel="noopener noreferrer" className="header-social-box">
                             <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#region" className="header-social-box">
+                        <a href="https://www.youtube.com/channel/UCp1OCXsR4b1BirIY1LW9dKg/videos?view_as=subscriber" target="_blank" rel="noopener noreferrer" className="header-social-box">
                             <i className="fab fa-youtube"></i>
                         </a>
 

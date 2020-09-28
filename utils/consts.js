@@ -1,62 +1,149 @@
 export const ALBUMS = [
     {
-        title: 'Album 1',
-        bgImage: '/img/sections/home.jpg',
+        title: 'Funlockets',
+        bgImage: '/img/albums/funlockets/1.PNG',
         images: [
             {
-                src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+                src: "/img/albums/funlockets/1.PNG",
+                thumbnail: "/img/albums/funlockets/1.PNG",
                 thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "After Rain (Jeshu John - designerspics.com)"
+                thumbnailHeight: 200,
             },
             {
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                src: "/img/albums/funlockets/2.PNG",
+                thumbnail: "/img/albums/funlockets/2.PNG",
                 thumbnailWidth: 320,
-                thumbnailHeight: 212,
-                tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-                caption: "Boats (Jeshu John - designerspics.com)"
+                thumbnailHeight: 200,
             },
-
-            {
-                src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-                thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-                thumbnailWidth: 320,
-                thumbnailHeight: 212
-            }
         ]
     },
     {
-        title: 'Album 2',
-        bgImage: '/img/sections/facility.png',
+        title: 'National Geographic',
+        bgImage: '/img/albums/national-geographic/1.PNG',
         images: [
             {
-                src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+                src: "/img/albums/national-geographic/1.PNG",
+                thumbnail: "/img/albums/national-geographic/1.PNG",
                 thumbnailWidth: 320,
-                thumbnailHeight: 174,
-                caption: "After Rain (Jeshu John - designerspics.com)"
+                thumbnailHeight: 200,
             },
             {
-                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-                thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+                src: "/img/albums/national-geographic/2.PNG",
+                thumbnail: "/img/albums/national-geographic/2.PNG",
                 thumbnailWidth: 320,
-                thumbnailHeight: 212,
-                tags: [{ value: "Ocean", title: "Ocean" }, { value: "People", title: "People" }],
-                caption: "Boats (Jeshu John - designerspics.com)"
+                thumbnailHeight: 200,
             },
-
             {
-                src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-                thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+                src: "/img/albums/national-geographic/3.PNG",
+                thumbnail: "/img/albums/national-geographic/3.PNG",
                 thumbnailWidth: 320,
-                thumbnailHeight: 212
-            }
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/national-geographic/4.PNG",
+                thumbnail: "/img/albums/national-geographic/4.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/national-geographic/5.PNG",
+                thumbnail: "/img/albums/national-geographic/5.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/national-geographic/6.PNG",
+                thumbnail: "/img/albums/national-geographic/6.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/national-geographic/7.PNG",
+                thumbnail: "/img/albums/national-geographic/7.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+        ]
+    },
+    {
+        title: 'Our Generation',
+        bgImage: '/img/albums/our-generation/1.PNG',
+        images: [
+            {
+                src: "/img/albums/our-generation/1.PNG",
+                thumbnail: "/img/albums/our-generation/1.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/2.PNG",
+                thumbnail: "/img/albums/our-generation/2.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/3.PNG",
+                thumbnail: "/img/albums/our-generation/3.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/4.PNG",
+                thumbnail: "/img/albums/our-generation/4.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/5.PNG",
+                thumbnail: "/img/albums/our-generation/5.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/6.PNG",
+                thumbnail: "/img/albums/our-generation/6.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/7.PNG",
+                thumbnail: "/img/albums/our-generation/7.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/8.PNG",
+                thumbnail: "/img/albums/our-generation/8.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/9.PNG",
+                thumbnail: "/img/albums/our-generation/9.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/10.PNG",
+                thumbnail: "/img/albums/our-generation/10.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/11.PNG",
+                thumbnail: "/img/albums/our-generation/11.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
+            {
+                src: "/img/albums/our-generation/12.PNG",
+                thumbnail: "/img/albums/our-generation/12.PNG",
+                thumbnailWidth: 320,
+                thumbnailHeight: 200,
+            },
         ]
     },
 ]
-
 
 export const VIDEOS = [
     {
