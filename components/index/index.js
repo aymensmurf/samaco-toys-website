@@ -1,6 +1,7 @@
 import Home from './Home'
 import AboutUs from './AboutUs'
 import Founder from './Founder'
+import Group from './Group'
 import Philosophy from './Philosophy'
 import CEO from './CEO'
 import Team from './Team'
@@ -15,6 +16,7 @@ export {
     Home,
     AboutUs,
     Founder,
+    Group,
     Philosophy,
     CEO,
     Team,

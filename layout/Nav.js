@@ -19,6 +19,10 @@ const Nav = ({ t, isRTL }) => {
             link: "#founder",
         },
         {
+            title: t('group'),
+            link: "#group",
+        },
+        {
             title: t('philosophy'),
             link: "#philosophy",
         },
@@ -96,8 +100,10 @@ const Nav = ({ t, isRTL }) => {
             setIndex(9)
         } else if ((sbp >= positions[10]) && (sbp < positions[11])) {
             setIndex(10)
-        } else if ((sbp >= positions[11])) {
+        } else if ((sbp >= positions[11]) && (sbp < positions[12])) {
             setIndex(11)
+        } else if ((sbp >= positions[12])) {
+            setIndex(12)
         } else {
             setIndex(-1)
         }

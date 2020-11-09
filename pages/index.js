@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Layout from '../layout/Layout'
-import { Home, AboutUs, Founder, Philosophy, CEO, Team, Facility, Reach, Brands, Customers, Media, Contact } from '../components/index'
+import { Home, AboutUs, Founder, Group, Philosophy, CEO, Team, Facility, Reach, Brands, Customers, Media, Contact } from '../components/index'
 
 import { i18n, withTranslation } from '../i18n'
 
@@ -17,10 +17,11 @@ const Index = () => {
   return (
     <Layout>
 
-      <div className={isRTL ? 'rtl' : 'ltr'} style={{width: '100%'}}>
+      <div className={isRTL ? 'rtl' : 'ltr'} style={{ width: '100%' }}>
         <Home isRTL={isRTL} />
         <AboutUs isRTL={isRTL} />
         <Founder isRTL={isRTL} />
+        <Group />
         <Philosophy />
         <CEO isRTL={isRTL} />
         <Team />
@@ -28,7 +29,7 @@ const Index = () => {
         <Reach />
         <Brands />
         <Customers />
-        <Media isRTL={isRTL}/>
+        <Media isRTL={isRTL} />
         <Contact isRTL={isRTL} />
       </div>
 
