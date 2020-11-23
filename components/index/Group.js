@@ -6,7 +6,7 @@ const Group = ({ t }) => {
     return (
         <section id="group">
             <ScrollAnimation animateIn='fadeInUp'>
-                <h2 style={{ marginBottom: 60 }}>
+                <h2 style={{ marginBottom: 10 }}>
                     <span style={{ color: '#EFB71C' }}>{t('title')}</span>
                 </h2>
             </ScrollAnimation>
@@ -35,20 +35,20 @@ const Group = ({ t }) => {
             <style jsx>{`
                 .team-grid {
                     display: grid;
-                    grid-column-gap: 0px;
+                    grid-column-gap: 40px;
                     grid-row-gap: 60px;
                     grid-template-columns: 1fr 1fr;
                 }
 
                 @media only screen and (max-width: 768px) {
                     .team-grid {
-                        grid-template-columns: auto auto;
+                        grid-template-columns: 1fr 1fr;
                     }
                 }
                 
                 @media only screen and (max-width: 699px) {
                     .team-grid {
-                        grid-template-columns: auto;
+                        grid-template-columns: 1fr;
                     }
                 }
             `}</style>
@@ -66,34 +66,49 @@ const Item = ({ name, position, pic }) => {
     return (
         <div className="avatar-bg">
             <div>
-                <p>{name}</p>
-                <p style={{ fontSize: 25 }}>{position}</p>
+                <p className="name">{name}</p>
+                <p className="position">{position}</p>
             </div>
 
             <style jsx>{`
+                .name {
+                    font-size: 21px;
+                }
+
+                .position {
+                    font-size: 16px;
+                }
+
                 .avatar-bg {
                     background-image: url(/img/group/${pic}.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    height: 400px;
-                    width: 60%;
-                    max-width: 60%;
+                    height: 450px;
+                    width: 300px;
+                    max-width: 300px;
                     padding: 33px;
                     display: flex;
                     align-items: flex-end;
                     border-radius: 22px;
-                }                
+                }
 
-                @media only screen and (max-height: 760px) {
+                @media only screen and (max-width: 876px) {
                     .avatar-bg {
-                        height: 300px;
+                        width: 250px;
+                        max-width: 250px;
+                    }
+
+                    .name {
+                        font-size: 17px;
+                        margin-bottom: 8px;
                     }
                 }
 
-                @media only screen and (max-width: 600px) {
+                @media only screen and (max-width: 321px) {
                     .avatar-bg {
-                        height: 350px;
+                        width: 230px;
+                        max-width: 230px;
                     }
                 }
             `}</style>
