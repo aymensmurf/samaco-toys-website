@@ -20,11 +20,6 @@ const Team = ({ t }) => {
                             pic='yasser-tamar'
                         />
                         <Item
-                            name={t('ahmed_derham')}
-                            position={t('ahmed_derham_pos')}
-                            pic='ahmed-derham'
-                        />
-                        <Item
                             name={t('mazhar_khan')}
                             position={t('mazhar_khan_pos')}
                             pic='mazher-khan'
@@ -98,7 +93,7 @@ const Item = ({ name, position, pic }) => {
         <div className="avatar-bg">
             <div>
                 <p>{name}</p>
-                <p style={{ fontSize: 25 }}>{position}</p>
+                <p style={{ fontSize: 18 }}>{position}</p>
             </div>
 
             <style jsx>{`

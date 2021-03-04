@@ -176,6 +176,11 @@ export const BRANDS = [
     "national-geographic",
     "banzai",
     "mondo",
+    "dohtime",
+    "laserx",
+    "playmobil",
+    "ravensburger",
+    "razor"
 ]
 
 export const CUSTOMERS = [
