@@ -1,20 +1,23 @@
-import React from 'react'
+import { useState } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { withTranslation } from '../../i18n'
 
 const Contact = ({ t, isRTL }) => {
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
     return (
         <section id="contact">
             <div className="grid-2">
                 <ScrollAnimation animateIn='fadeInUp'>
                     <div>
-                        <form>
-                            <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#CCCCCC', borderRadius: 20, padding: 20 }}>
-                                <input type="email" name="email" placeholder={`${t('email')}*`} style={{ marginBottom: 20 }} />
-                                <textarea name="message" rows="6" placeholder={`${t('message')}*`} style={{ marginBottom: 20 }}></textarea>
-                                <input type="button" value={t('send_message')} />
-                            </div>
-                        </form>
+                        <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#CCCCCC', borderRadius: 20, padding: 20 }}>
+                            <input type="email" name="email" placeholder={`${t('email')}*`} value={email} onChange={e => setEmail(e.target.value)} style={{ marginBottom: 20 }} />
+                            <textarea name="message" rows="6" placeholder={`${t('message')}*`} value={message} onChange={e => setMessage(e.target.value)} style={{ marginBottom: 20 }}></textarea>
+                            <a href={`mailto:Info@firstgroupintl.com?from=${email}&subject=SamacoToys$body=${message}`}>
+                                <input type="submit" value={t('send_message')} style={{ cursor: 'pointer', width: '100%' }} />
+                            </a>
+                        </div>
                     </div>
                 </ScrollAnimation>
 
@@ -92,7 +95,7 @@ const Contact = ({ t, isRTL }) => {
                     background-color: transparent;
                 }
 
-                input[type=button] {
+                input[type=submit] {
                     background-color: white;
                     border: none;
                 }
