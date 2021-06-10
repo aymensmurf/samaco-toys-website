@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { withTranslation } from '../../i18n'
+import FAQ from './components/FAQ';
 
 const Contact = ({ t, isRTL }) => {
     const [email, setEmail] = useState("");
@@ -8,7 +9,11 @@ const Contact = ({ t, isRTL }) => {
 
     return (
         <section id="contact">
-            <div className="grid-2">
+            <ScrollAnimation animateIn='fadeInUp'>
+                <FAQ t={t} />
+            </ScrollAnimation>
+
+            <div className="grid-2" style={{ marginTop: 200 }}>
                 <ScrollAnimation animateIn='fadeInUp'>
                     <div>
                         <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#CCCCCC', borderRadius: 20, padding: 20 }}>
@@ -72,11 +77,11 @@ const Contact = ({ t, isRTL }) => {
                 </div>
             </div>
 
-            <ScrollAnimation animateIn='fadeInUp'>
-                <div className='copy_right' style={{ display: 'flex', justifyContent: 'center', marginTop: 40 }}>
-                    <p style={{ fontSize: 12 }}>{t('copy_right')} <a href="https://innovant.studio/" style={{ color: '#EFB71C' }}>InnovAnt</a></p>
-                </div>
-            </ScrollAnimation>
+            {/* <ScrollAnimation animateIn='fadeInUp'> */}
+            <div className='copy_right' style={{ display: 'flex', justifyContent: 'center', marginTop: 60, marginBottom: 100 }}>
+                <p style={{ fontSize: 12 }}>{t('copy_right')} <a href="https://innovant.studio/" style={{ color: '#EFB71C' }}>InnovAnt</a></p>
+            </div>
+            {/* </ScrollAnimation> */}
 
             <style jsx>{`
                 section {

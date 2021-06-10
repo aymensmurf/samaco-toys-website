@@ -10,5 +10,49 @@
     "po_box_29244": "PO Box 29244, Dubai, UAE",
     "part_of": "Part of",
     "al_nahla_group": "Al Nahla Group",
-    "copy_right": "Copyright SAMACO TOYS 2020. All rights reserved. Developed by"
+    "copy_right": "Copyright SAMACO TOYS 2020. All rights reserved. Developed by",
+    "faq": {
+        "title": "Got questions?",
+        "description": "These are the most frequently asked questions. If you have another thing on mind, get in touch.",
+        
+        "q1": "Who is Samaco Toys & Leisure Company?",
+        "a1": "We are the oldest and one of the largest distributors of Toys and Leisure brands in Saudi Arabia. We are one of the founding companies of Toys Industry in Saudi Arabia",
+        
+        "q2": "What is the nature of our business?",
+        "a2": "We are distributors of Toys and Leisure brands.",
+        
+        "q3": "What products do we sell?",
+        "a3_a": "We sell toys for Girls, Boys and families, we also sell outdoor products for Boys and Girls as well as families",
+        "a3_b": "We sell products like Cars, Dolls, Doll houses, Roll Play toys, Puzzles, Swimming pools, E-Scooters, Trampolines, Sand and Water toys, Inflatables, Games etc",
+        
+        "q4": "What age group are our products suitable for?",
+        "a4_a": "Our products are made for all age groups and can be enjoyed by all family together depending on each product type and brand.",
+        "a4_b": "Each product carries age group suitable for",
+        
+        "q5": "What brands do we distribute?",
+        "a5": "We proudly distribute some of the leading, most trusted and loved brands from all around the world which includes (Intex, Maisto, Our Generation, Step2, Razor, Plum, Burago, Dolls World, Banzai, Prime 3D, Terra, Playmobil, Mondo, Androni, Lil Woodzeez, Oops, Craze, Mad Mattr, Burago Junior, Barbie Bildo, D Dart, LaserX, Doh Time, Gemex, VIP Pets, Laffies, National Geographic, Sunny Bunnies, Power Players etc to name a few.",
+        
+        "q6": "Where are we located?",
+        "a6": "We are headquartered in Jeddah, Saudi Arabia, with regional operations office and distribution center in Riyadh.",
+        
+        "q7": "What Geography do we cover?",
+        "a7": "We cover the entire length and breadth of Saudi Arabia from our Head Office in Jeddah, Regional Office in Riyadh and our distribution center in Jeddah and Riyadh.",
+        
+        "q8": "Do we cover only Saudi Arabia?",
+        "a8_a": "We cover entire GCC.",
+        "a8_b": "Our Offices in Saudi Arabia covers the geography of Saudi Arabia and our sister company The First Group, based in Dubai, UAE covers rest of GCC.",
+        
+        "q9": "How can you purchase our brands?",
+        "a9_a": "Since we are a distributor, our brands are available to be purchased at some of the leading retail chains and brands as well as most of the e-commerce companies operating in Saudi Arabia.",
+        "a9_b": "Our brands are available at ToysRus, Al Hussain, Baby Shop, SACO, Virgin Mega Store, Al Musbaah, Hi Kids, Toy & Surprise, Baby Story, Hyper Panda, Tamimi, Carrefour, Amazon, Noon, Mumzworld, Dabdoob etc to name a few.",
+        
+        "q10": "Are our products Safe and Genuine?",
+        "a10_a": "All our are tested, certified and safe. All our products are made of the highest quality material and are tested by independent international labs for stringent quality and safety standards.",
+        "a10_b": "All our products are made to confirm the strict standards set by Saudi Arabian authorities for importing toys into Saudi Arabia, All our products are also made to confirm the US and EU standards which are one of the highest quality benchmarks worldwide.",
+        "a10_c": "All our products are Genuine, and carry official license confirmation from the license owners, If its not Genuine and Safe, we will not bring it to our territory for our society.",
+        
+        "q11": "How do we spot the trends and source the products?",
+        "a11_a": "Our Marketing, Sales and Procurement teams are some of the leading experts in the industry who are exposed and keep themselves well-aware of the trends globally, they keep researching the latest trends and opportunities so that kids in our society can have access to the latest, trendy toys.",
+        "a11_b": "They are also well connected with the brand owners and together as a team we work very closely with toy designers, manufacturers, and brand owners to bring the trendy toys for our society so that our kids and families in Saudi Arabia are at par with the global trends."
+    }
 }
