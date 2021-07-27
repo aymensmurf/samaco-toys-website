@@ -51,6 +51,10 @@ const Nav = ({ t, isRTL }) => {
             link: "#customers",
         },
         {
+            title: t('eretailers'),
+            link: "#eretailers",
+        },
+        {
             title: t('media'),
             link: "#media",
         },
@@ -102,8 +106,10 @@ const Nav = ({ t, isRTL }) => {
             setIndex(10)
         } else if ((sbp >= positions[11]) && (sbp < positions[12])) {
             setIndex(11)
-        } else if ((sbp >= positions[12])) {
+        } else if ((sbp >= positions[12]) && (sbp < positions[13])) {
             setIndex(12)
+        } else if ((sbp >= positions[13])) {
+            setIndex(13)
         } else {
             setIndex(-1)
         }

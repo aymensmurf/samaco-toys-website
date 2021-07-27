@@ -86,6 +86,8 @@ a {
 button {
     color: #2d4375;
     font-size: 25px;
+    cursor: pointer;
+    border: none;
 }
 
 button:focus {
@@ -107,7 +109,6 @@ button:focus {
     text-align: left;
 }
 
-
 /* GRID */
 
 .grid-2 {
@@ -126,7 +127,6 @@ button:focus {
     justify-content: center;
 }
 
-
 /*  */
 
 .hide-sm {
@@ -138,7 +138,6 @@ button:focus {
     clear: both;
 }
 
-
 /*  */
 
 .btn-load-more {
@@ -148,6 +147,10 @@ button:focus {
     border-radius: 46px;
     border: none;
     cursor: pointer;
+}
+
+.btn-load-more:hover {
+    background-color: #bbb;
 }
 
 .ReactGridGallery_tile-viewport img {

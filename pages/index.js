@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Layout from '../layout/Layout'
-import { Home, AboutUs, Founder, Group, Philosophy, CEO, Team, Facility, Reach, Brands, Customers, Media, Contact } from '../components/index'
+import { Home, AboutUs, Founder, Group, Philosophy, CEO, Team, Facility, Reach, Brands, Customers, Eretailers, Media, Contact } from '../components/index'
 
 import { i18n, withTranslation } from '../i18n'
 
@@ -29,6 +29,7 @@ const Index = () => {
         <Reach />
         <Brands />
         <Customers />
+        <Eretailers />
         <Media isRTL={isRTL} />
         <Contact isRTL={isRTL} />
       </div>

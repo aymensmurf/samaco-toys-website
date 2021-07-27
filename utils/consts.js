@@ -199,3 +199,46 @@ export const CUSTOMERS = [
     "noon",
     "lulu",
 ]
+
+export const ERETAILERS = [
+    {
+        title: "amazon",
+        link: "https://www.amazon.sa/"
+    },
+    {
+        title: "baby-island",
+        link: "https://baby-island.com.sa/"
+    },
+    {
+        title: "babystory",
+        link: "https://baby-story.com/"
+    },
+    {
+        title: "fordeal",
+        link: "https://www.fordeal.com/en-SA/kids-mom-c90000484?customer_trace=1.word.4.4.90000484..5of3ranHDkxSaE.mod_CategoryNav-scene_jump-idx_6-page_home.6"
+    },
+    {
+        title: "hk",
+        link: "https://hikids.com.sa/"
+    },
+    {
+        title: "hnak",
+        link: "https://www.hnak.com/en-sa/pgabr/baby-and-toys"
+    },
+    {
+        title: "noon",
+        link: "https://www.noon.com/saudi-en/baby"
+    },
+    {
+        title: "saco",
+        link: "https://www.saco.sa/en/All-Saco-Categories/Sports-%26-Fitness-Toys/Toys/c/MC0706"
+    },
+    {
+        title: "toys-r-us",
+        link: "https://www.toysrus.com.sa/"
+    },
+    {
+        title: "toyzer",
+        link: "https://toyzer.sa/"
+    },
+]
