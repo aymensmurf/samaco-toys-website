@@ -202,43 +202,45 @@ export const CUSTOMERS = [
 
 export const ERETAILERS = [
     {
-        title: "amazon",
-        link: "https://www.amazon.sa/"
-    },
-    {
-        title: "baby-island",
-        link: "https://baby-island.com.sa/"
-    },
-    {
-        title: "babystory",
-        link: "https://baby-story.com/"
-    },
-    {
-        title: "fordeal",
-        link: "https://www.fordeal.com/en-SA/kids-mom-c90000484?customer_trace=1.word.4.4.90000484..5of3ranHDkxSaE.mod_CategoryNav-scene_jump-idx_6-page_home.6"
-    },
-    {
-        title: "hk",
-        link: "https://hikids.com.sa/"
-    },
-    {
-        title: "hnak",
-        link: "https://www.hnak.com/en-sa/pgabr/baby-and-toys"
-    },
-    {
-        title: "noon",
-        link: "https://www.noon.com/saudi-en/baby"
-    },
-    {
-        title: "saco",
-        link: "https://www.saco.sa/en/All-Saco-Categories/Sports-%26-Fitness-Toys/Toys/c/MC0706"
-    },
-    {
         title: "toys-r-us",
         link: "https://www.toysrus.com.sa/"
     },
     {
+        title: "saco",
+        link: "https://www.saco.sa/en/search/?code=&text=intex"
+    },
+    {
+        title: "hk",
+        link: "https://hikids.com.sa/categories/136341/%D8%A7%D9%88%D8%B1-%D8%AC%D9%86%D8%B1%D9%8A%D8%B4%D9%86"
+    },
+    {
+        title: "baby-island",
+        link: "https://baby-island.com.sa/product-brands/step2/"
+    },
+    {
+        title: "noon",
+        link: "https://www.noon.com/saudi-en/@ourgeneration"
+    },
+
+
+    {
+        title: "babystory",
+        link: "https://baby-story.com/index.php?route=product/search&search=our%20generation"
+    },
+    {
+        title: "hnak",
+        link: "https://www.hnak.com/ar-sa/search?q=%D8%AF%D9%88%D9%84%D8%B2%20"
+    },
+    {
+        title: "amazon",
+        link: "https://www.amazon.sa/s?k=maisto&ref=nb_sb_noss_2"
+    },
+    {
         title: "toyzer",
         link: "https://toyzer.sa/"
+    },
+    {
+        title: "fordeal",
+        link: "https://www.fordeal.com/en-SA/intex-c170003222?customer_trace=1.word.4.4.170003222..5of3bTnETxIDGF.mod_CategoryNav-scene_jump-idx_6%7E8%7E5-page_search.6%7E8%7E5"
     },
 ]
