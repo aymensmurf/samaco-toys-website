@@ -203,7 +203,7 @@ export const CUSTOMERS = [
 export const ERETAILERS = [
     {
         title: "toys-r-us",
-        link: "https://www.toysrus.com.sa/"
+        link: "https://www.toysrus.com.sa/search?q=razor"
     },
     {
         title: "saco",
@@ -239,7 +239,7 @@ export const ERETAILERS = [
     },
     {
         title: "toyzer",
-        link: "https://toyzer.sa/"
+        link: "https://toyzer.sa/search?q=razor"
     },
     {
         title: "fordeal",
