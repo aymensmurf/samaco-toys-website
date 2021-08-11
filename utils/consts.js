@@ -221,8 +221,10 @@ export const ERETAILERS = [
         title: "noon",
         link: "https://www.noon.com/saudi-en/@ourgeneration"
     },
-
-
+    {
+        title: "dabdoob",
+        link: "https://dabdoobapp.com/"
+    },
     {
         title: "babystory",
         link: "https://baby-story.com/index.php?route=product/search&search=our%20generation"
