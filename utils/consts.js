@@ -242,6 +242,10 @@ export const ERETAILERS = [
         link: "https://toyzer.sa/search?q=razor"
     },
     {
+        title: "mumzworld",
+        link: "https://saudi.mumzworld.com/sa-en/terra"
+    },
+    {
         title: "fordeal",
         link: "https://www.fordeal.com/en-SA/intex-c170003222?customer_trace=1.word.4.4.170003222..5of3bTnETxIDGF.mod_CategoryNav-scene_jump-idx_6%7E8%7E5-page_search.6%7E8%7E5"
     },
