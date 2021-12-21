@@ -161,7 +161,12 @@ export const VIDEOS = [
 	{
 		id: "2CiyLIKWo48",
 		title: "مشاركة ساماكو الألعاب والترفيه | مهرجان الرياض للألعاب 2019",
-		bgImage: "/img/thambnails/default.png",
+		bgImage: "/img/thambnails/rtf1.png",
+	},
+	{
+		id: "VNfRI9EROpg",
+		title: "مشاركة ساماكو الألعاب والترفيه | مهرجان الرياض للألعاب 2021",
+		bgImage: "/img/thambnails/rtf2.png",
 	},
 ];
 
